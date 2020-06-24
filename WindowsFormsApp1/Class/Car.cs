@@ -152,7 +152,7 @@ namespace WindowsFormsApp1.Class
             A.X = 430 - temp; A.Y = 560; 
             DrawEllipse(A, g, 45, 65);
 
-            //while (true)
+            while (true)
             {
                 A.X = 230 - temp; A.Y = 530; 
                 DrawEllipse(A, g, 40, 60);
