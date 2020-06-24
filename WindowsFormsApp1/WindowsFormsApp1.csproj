@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Class\Car.cs" />
     <Compile Include="Class\HinhChuNhat.cs" />
     <Compile Include="Class\HinhTamGiac.cs" />
     <Compile Include="Class\HinhTron.cs" />

@@ -56,19 +56,26 @@ namespace WindowsFormsApp1.Class
                     p = p + 4 * x - 6;
                 else
                 {
-                    y -= 5;
+                    y --;
                     p = p + 4 * (x - y) + 10;
                 }
                 Drawn8Point(x, y, g, color);
-                x += 5;
+                x ++;
             }
         }
 
+        public void Delete(Graphics g)
+        {
+            
+            g.FillEllipse(new SolidBrush(Color.White), this.p.X - radius-5, this.p.Y - radius-5, radius * 2+10, radius * 2+10);
+        }
 
-        private void FillColor(Graphics g,Color color)
+
+        public void FillColor(Graphics g,Color color)
         {
             //Point p = ToaDo
-            g.FillEllipse(new SolidBrush(color), this.p.X - radius, this.p.Y - radius, radius * 2 + 3, radius * 2 + 3);
+            g.FillEllipse(new SolidBrush(color), this.p.X-radius , this.p.Y-radius , radius * 2 , radius * 2 );
+            
         }
     }
 }
