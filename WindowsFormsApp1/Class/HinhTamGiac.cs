@@ -26,7 +26,7 @@ namespace WindowsFormsApp1.Class
         }
         public void Draw(Graphics g)
         {
-            FillColor(g, Color.AliceBlue);
+            FillColor(g, color);
             Line line;
             line = new Line(this.p1, this.p2, color);
             line.Draw(g);

@@ -47,11 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Class\Car.cs" />
+    <Compile Include="Class\Car2d.cs" />
+    <Compile Include="Class\Car3d.cs" />
+    <Compile Include="Class\Hinh1.cs" />
+    <Compile Include="Class\HinhElip.cs" />
     <Compile Include="Class\HinhChuNhat.cs" />
     <Compile Include="Class\HinhTamGiac.cs" />
+    <Compile Include="Class\HinhThangCan.cs" />
     <Compile Include="Class\HinhTron.cs" />
     <Compile Include="Class\Line.cs" />
+    <Compile Include="Class\Sun.cs" />
     <Compile Include="Class\ToaDo.cs" />
     <Compile Include="Class\Transformations.cs" />
     <Compile Include="Form1.cs">

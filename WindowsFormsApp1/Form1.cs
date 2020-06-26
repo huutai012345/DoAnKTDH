@@ -13,11 +13,15 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        private Graphics g ; 
+        private Graphics g ;
+        private Car2d c ;
+        private Hinh1 d;
         public Form1()
         {
             InitializeComponent();
             g = this.panel2.CreateGraphics();
+            c = new Car2d(this.g);
+            d = new Hinh1(this.g);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,10 +29,12 @@ namespace WindowsFormsApp1
             if(!timer1.Enabled)
             {
                 this.timer1.Start();
+                this.timer2.Start();
             }
             else
             {
                 this.timer1.Stop();
+                this.timer2.Stop();
             }
             
         }
@@ -37,35 +43,37 @@ namespace WindowsFormsApp1
         {
             Graphics g = this.panel2.CreateGraphics();
             // SolidBrush brush = new SolidBrush(Color.DarkSlateBlue);
-          
+
             //g.DrawLine(new Pen(Color.Red), 0, 330, 1230, 330);
             //g.DrawLine(new Pen(Color.Red), 470, 0, 470, 1230);
-
-            
-
-            
-           
         }
-
+       // Car3d c = new Car3d();
+        Point p1 = new Point(200, 200);
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
             this.drawHeToaDo();
-            Car c= new Car();
-            c.Draw(g);
+           
+            d.Draw();
+            c.Draw();
         }
 
-        Point p1 = new Point(200, 200);
+      
         private void timer1_Tick(object sender, EventArgs e)
         {
-          
-            //HinhTron ht = new HinhTron(50, p1, Color.Black);
-            //ht.Delete(g);
-            //HinhTron ht1 = new HinhTron(50, p1, Color.Black);
-            //ht1.Draw(g);
-
-
-            //Transformations.TinhTien(p1, 5, 0);
+            // Console.WriteLine("a");
+            //c.DrawLightYellow(g);
+            c.run();
+            d.run();
         }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            //Console.WriteLine("b");
+            //c.DrawLightGray(g);
+
+        }
+
+      
     }
 }
