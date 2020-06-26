@@ -51,8 +51,11 @@ namespace WindowsFormsApp1
         {
 
             this.drawHeToaDo();
-            Car c= new Car();
+            Car c = new Car();
             c.Draw(g);
+
+            //airPlane a = new airPlane();
+            //a.Draw(g);
         }
 
         Point p1 = new Point(200, 200);
