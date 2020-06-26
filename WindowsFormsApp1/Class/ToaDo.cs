@@ -58,16 +58,16 @@ namespace WindowsFormsApp1.Class
             Pen p1 = new Pen(color);
             SolidBrush b = new SolidBrush(color);
 
-           // g.DrawEllipse(p1, pointX, pointY, 2, 2);
+            //g.DrawEllipse(p1, pointX, pointY, 2, 2);
             //g.FillEllipse(b, pointX, pointY, 2, 2);
-           // g.DrawEllipse(p1, pointX - 2, pointY - 2, 2, 2);
+            //g.DrawEllipse(p1, pointX - 2, pointY - 2, 2, 2);
             //g.FillEllipse(b, pointX - 2, pointY - 2, 2, 2);
             //g.DrawEllipse(p1, pointX, pointY - 2, 2, 2);
             //g.FillEllipse(b, pointX, pointY - 2, 2, 2);
             //g.DrawEllipse(p1, pointX - 2, pointY, 2, 2);
             //g.FillEllipse(b, pointX - 2, pointY, 2, 2);
-           
-            g.FillRectangle(b, x - 2, y - 2, 5, 5);
+
+            g.FillRectangle(b, x -2, y-2 , 5, 5);
         }
     }
 }

@@ -13,15 +13,17 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        private Graphics g ;
-        private Car2d c ;
+        private Graphics g;
+      
         private Hinh1 d;
+        private Car3d c3d;
         public Form1()
         {
             InitializeComponent();
             g = this.panel2.CreateGraphics();
-            c = new Car2d(this.g);
+         
             d = new Hinh1(this.g);
+            c3d = new Car3d();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,35 +44,44 @@ namespace WindowsFormsApp1
         public void drawHeToaDo()
         {
             Graphics g = this.panel2.CreateGraphics();
+        
+            for (int i = 0; i <= 320; i++)
+            {
+                g.DrawLine(new Pen(Color.Pink), 5 * i, 0, 5 * i, 1360);
+                g.DrawLine(new Pen(Color.Pink), 0, 5 * i, 1360, 5 * i);
+            }
+
+            g.DrawLine(new Pen(Color.Red), 680, 0, 680, 385);
+            g.DrawLine(new Pen(Color.Red), 680, 385, 1360, 385);
+            g.DrawLine(new Pen(Color.Red), 680, 385, 0, 770);
             // SolidBrush brush = new SolidBrush(Color.DarkSlateBlue);
 
             //g.DrawLine(new Pen(Color.Red), 0, 330, 1230, 330);
             //g.DrawLine(new Pen(Color.Red), 470, 0, 470, 1230);
         }
-       // Car3d c = new Car3d();
-        Point p1 = new Point(200, 200);
+      
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
             this.drawHeToaDo();
-           
-            d.Draw();
-            c.Draw();
+
+            //d.DrawNgay();
+            c3d.Draw(g);
         }
 
       
         private void timer1_Tick(object sender, EventArgs e)
         {
             // Console.WriteLine("a");
-            //c.DrawLightYellow(g);
-            c.run();
-            d.run();
+            c3d.DrawLightYellow(g);
+            c3d.RotateBanhTrc(g);
+           // d.run();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             //Console.WriteLine("b");
-            //c.DrawLightGray(g);
+            c3d.DrawLightGray(g);
 
         }
 

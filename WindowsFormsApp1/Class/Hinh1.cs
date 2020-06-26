@@ -10,7 +10,9 @@ namespace WindowsFormsApp1.Class
 {
     class Hinh1
     {
+        private bool checkNgay = false;
         private Graphics g;
+        private Car2d c;
         private HinhChuNhat d;
         private Line vachkeDuong1;
         private Line vachkeDuong2;
@@ -29,14 +31,14 @@ namespace WindowsFormsApp1.Class
         private int toadoXMax = 1350;
         private int speed =15;
        
-
         public Hinh1(Graphics g)
         {
             this.g = g;
+            c = new Car2d(this.g);
             sun = new Sun(new Point(130, 130),70);
             nenTroi = new HinhChuNhat(new Point(0, 0), new Point(1350, 600), Color.FromArgb(62, 155, 244));
 
-            d = new HinhChuNhat(new Point(0, 600), new Point(toadoXMax, 950), Color.Black);
+            d = new HinhChuNhat(new Point(0, 600), new Point(toadoXMax, 800), Color.Black);
             vachkeDuong1 = new Line(new Point(136, toadoY), new Point(340, toadoY), Color.Black);
             vachkeDuong2 = new Line(new Point(476, toadoY), new Point(680, toadoY), Color.Black);
             vachkeDuong3 = new Line(new Point(816, toadoY), new Point(1020, toadoY), Color.Black);
@@ -47,7 +49,6 @@ namespace WindowsFormsApp1.Class
             vachkeDuong7 = new Line(Transformations.TinhTien(vachkeDuong3.A, -toadoXMax, 0), Transformations.TinhTien(vachkeDuong3.B, -toadoXMax, 0), Color.Black);
             vachkeDuong8 = new Line(Transformations.TinhTien(vachkeDuong4.A, -toadoXMax, 0), Transformations.TinhTien(vachkeDuong4.B, -toadoXMax, 0), Color.Black);
         }
-
 
         public void Reset()
         {
@@ -73,6 +74,9 @@ namespace WindowsFormsApp1.Class
             {
                 vachkeDuong4.A = Transformations.TinhTien(vachkeDuong8.A, -toadoXMax, 0);
                 vachkeDuong4.B = Transformations.TinhTien(vachkeDuong8.B, -toadoXMax, 0);
+
+                
+              
             }
 
             if (vachkeDuong5.A.X >= toadoXMax)
@@ -97,10 +101,24 @@ namespace WindowsFormsApp1.Class
             {
                 vachkeDuong8.A = Transformations.TinhTien(vachkeDuong4.A, -toadoXMax, 0);
                 vachkeDuong8.B = Transformations.TinhTien(vachkeDuong4.B, -toadoXMax, 0);
+
+
+
+                if (checkNgay)
+                {
+                    DrawNgay();
+                    checkNgay = false;
+                }
+                else
+                {
+                    DrawDem();
+                    checkNgay = true;
+                }
+
             }
         }
 
-        public void Draw()
+        public void DrawNgay()
         {
             nenTroi.FillColor(g, Color.FromArgb(62, 155, 244));
             d.FillColor(g, Color.FromArgb(127, 127, 127));
@@ -109,7 +127,19 @@ namespace WindowsFormsApp1.Class
             vachkeDuong2.Draw(g);
             vachkeDuong3.Draw(g);
             vachkeDuong4.Draw(g);
+            c.Draw();
+        }
 
+        public void DrawDem()
+        {
+            nenTroi.FillColor(g, Color.FromArgb(30, 46, 60));
+            d.FillColor(g, Color.FromArgb(127, 127, 127));
+            sun.Draw(g);
+            vachkeDuong1.Draw(g);
+            vachkeDuong2.Draw(g);
+            vachkeDuong3.Draw(g);
+            vachkeDuong4.Draw(g);
+            c.Draw();
         }
 
         public void Draw1()
@@ -140,7 +170,16 @@ namespace WindowsFormsApp1.Class
                 ToaDo.HienThi(new Point(this.vachkeDuong7.A.X - i, this.vachkeDuong7.A.Y), g, Color.FromArgb(127, 127, 127));
                 ToaDo.HienThi(new Point(this.vachkeDuong8.A.X - i, this.vachkeDuong8.A.Y), g, Color.FromArgb(127, 127, 127));
             }
-           this.sun.Delete(g);
+
+            if(this.checkNgay)
+            {
+                this.sun.DeleteNgay(g);
+            }
+            else
+            {
+                this.sun.DeleteDem(g);
+            }
+          
         }
 
         public void TinhTien()
@@ -163,9 +202,8 @@ namespace WindowsFormsApp1.Class
             vachkeDuong8.A = Transformations.TinhTien(vachkeDuong8.A, speed, 0);
             vachkeDuong8.B = Transformations.TinhTien(vachkeDuong8.B, speed, 0);
 
-            sun =new Sun(Transformations.TinhTien(this.sun.point,5,0),70);
+            sun =new Sun(Transformations.TinhTien(this.sun.point,1,0),70);
         }
-
 
         public void run()
         {
@@ -173,6 +211,7 @@ namespace WindowsFormsApp1.Class
             this.TinhTien();
             this.Delete();
             this.Reset();
+            c.run();
         }
 
       

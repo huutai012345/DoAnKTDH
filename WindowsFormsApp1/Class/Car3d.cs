@@ -9,8 +9,20 @@ namespace WindowsFormsApp1.Class
 {
     class Car3d
     {
+        private bool chopDen = true;
         private Point A = new Point(-1, -1);
         private Point B = new Point(-1, -1);
+        private Point C = new Point(-1, -1);
+
+        private Line truc1;
+        private Line truc2;
+        private Line truc3;
+        private Line truc4;
+        private Line truc5;
+        private Line truc6;
+
+        private HinhElip banhTrc;
+        private HinhElip banhSau;
 
         public void DrawEllipse(Point p1, Graphics g, int x, int y)
         {
@@ -23,7 +35,6 @@ namespace WindowsFormsApp1.Class
             // Draw ellipse to screen.
             g.DrawEllipse(blackPen, rect);
         }
-
 
         public void DrawLightGray(Graphics g)
         {
@@ -41,6 +52,64 @@ namespace WindowsFormsApp1.Class
             g.FillEllipse(solidBrush, A.X, A.Y, 40, 60);
             B.X = 430 - 100; B.Y = 560; DrawEllipse(B, g, 45, 65);
             g.FillEllipse(solidBrush, B.X, B.Y, 45, 65);
+        }
+
+        public void fillColorRight(Graphics g, Color c)
+        {
+            A = new Point(850, 150); B = new Point(900, 160); C = new Point(870, 180);
+            Point[] curvePoints = { A, B, C };
+            g.FillPolygon(new SolidBrush(c), curvePoints);
+            A = new Point(850, 150); B = new Point(820, 170); C = new Point(870, 180);
+            curvePoints = new Point[] { A, B, C };
+            g.FillPolygon(new SolidBrush(c), curvePoints);
+        }
+
+        public void fillColorLeft(Graphics g, Color r)
+        {
+            A = new Point(925, 162); B = new Point(890, 185); C = new Point(970, 170);
+            Point[] curvePoints = { A, B, C };
+            g.FillPolygon(new SolidBrush(r), curvePoints);
+            A = new Point(950, 195); B = new Point(890, 185); C = new Point(970, 170);
+            curvePoints = new Point[] { A, B, C };
+            g.FillPolygon(new SolidBrush(r), curvePoints);
+        }
+
+        public void RotateBanhTrc(Graphics g)
+        {
+            banhTrc.FillColor(g, Color.White);
+            banhSau.FillColor(g, Color.White);
+
+            truc1.B = Transformations.Quay(truc1.B, truc1.A,30);
+            truc2.B = Transformations.Quay(truc2.B, truc1.A, 30);
+            truc3.B = Transformations.Quay(truc3.B, truc1.A, 30);
+
+            truc4.B = Transformations.Quay(truc4.B, truc4.A, 30);
+            truc5.B = Transformations.Quay(truc5.B, truc4.A, 30);
+            truc6.B = Transformations.Quay(truc6.B, truc4.A, 30);
+
+            truc1.Draw(g);
+            truc2.Draw(g);
+            truc3.Draw(g);
+            truc4.Draw(g);
+            truc5.Draw(g);
+            truc6.Draw(g);
+
+            if(chopDen)
+            {
+                this.fillColorRight(g, Color.Red);
+                this.fillColorLeft(g, Color.Blue);
+
+                chopDen = false;
+            }
+            else
+            {
+                this.fillColorRight(g, Color.Blue);
+                this.fillColorLeft(g, Color.Red);
+
+                chopDen = true;
+            }
+            
+
         }
 
         public void Draw(Graphics g)
@@ -140,35 +209,62 @@ namespace WindowsFormsApp1.Class
             l.Draw(g);
 
             //banh truoc
-            A.X = 670 - temp; A.Y = 540;
+            A.X = 730 - temp;
+            A.Y = 610;
 
-            DrawEllipse(A, g, 120, 140);
-            A.X = 690 - temp; A.Y = 560; 
-            DrawEllipse(A, g, 80, 100); 
-            //solidBrush = new SolidBrush(Color.White); e.Graphics.FillEllipse(solidBrush, A.X, A.Y, 80, 100);
-            A.X = 730 - temp; A.Y = 610; B.X = 730 - temp; B.Y = 560; l = new Line(A, B, Color.Black);
-            l.Draw(g);
-            B.X = 770 - temp; B.Y = 620; 
-            l = new Line(A, B, Color.Black);
-            l.Draw(g);
-            B.X = 690 - temp; B.Y = 620;
-            l = new Line(A, B, Color.Black); l = new Line(A, B, Color.Black);
-            l.Draw(g);
+            banhTrc = new HinhElip(A, 12, 14, Color.Black);
+            banhTrc.Draw(g);
+            banhTrc.FillColor(g, Color.Black);
+           
+            banhTrc = new HinhElip(A, 8, 10, Color.Black);
+            banhTrc.Draw(g);
+            banhTrc.FillColor(g, Color.White);
+
+
+            B.X = 740 - temp; 
+            B.Y = 560;
+           
+            truc1 = new Line(A, B, Color.Black);
+            truc1.Draw(g);
+           
+            B.X = 785 - temp; 
+            B.Y = 625; 
+            truc2 = new Line(A, B, Color.Black);
+            truc2.Draw(g);
+            
+            B.X = 690 - temp; 
+            B.Y = 650;
+            truc3 = new Line(A, B, Color.Black);
+            truc3.Draw(g);
 
             //banh sau
-            A.X = 1300 - temp; A.Y = 350; 
-            DrawEllipse(A, g, 120, 140); 
-            //solidBrush = new SolidBrush(Color.Black); e.Graphics.FillEllipse(solidBrush, A.X, A.Y, 120, 140);
-            A.X = 1320 - temp; A.Y = 370; 
-            DrawEllipse(A, g, 80, 100); 
-            //solidBrush = new SolidBrush(Color.White); e.Graphics.FillEllipse(solidBrush, A.X, A.Y, 80, 100);
-            A.X = 1360 - temp; A.Y = 420; B.X = 1360 - temp; B.Y = 370;
-            l = new Line(A, B, Color.Black);
-            l.Draw(g);
-            B.X = 1400 - temp; B.Y = 430; l = new Line(A, B, Color.Black);
-            l.Draw(g);
-            B.X = 1320 - temp; B.Y = 430; l = new Line(A, B, Color.Black);
-            l.Draw(g);
+            
+            A.X = 1360 - temp; 
+            A.Y = 420; 
+          
+
+            banhSau = new HinhElip(A, 12, 14, Color.Black);
+            banhSau.Draw(g);
+            banhSau.FillColor(g, Color.Black);
+
+            banhSau = new HinhElip(A, 8, 10, Color.Black);
+            banhSau.Draw(g);
+            banhSau.FillColor(g, Color.White);
+
+            B.X = 1360 - temp;
+            B.Y = 360;
+            truc4 = new Line(A, B, Color.Black);
+            truc4.Draw(g);
+
+            B.X = 1410 - temp; 
+            B.Y = 430; 
+            truc5 = new Line(A, B, Color.Black);
+            truc5.Draw(g);
+            
+            B.X = 1310 - temp; 
+            B.Y = 430; 
+            truc6 = new Line(A, B, Color.Black);
+            truc6.Draw(g);
 
             //đèn
             A.X = 230 - temp; A.Y = 530; 
@@ -176,11 +272,12 @@ namespace WindowsFormsApp1.Class
             A.X = 430 - temp; A.Y = 560; 
             DrawEllipse(A, g, 45, 65);
 
-           
+            fillColorRight(g, Color.Blue);
+            fillColorLeft(g, Color.Red);
 
 
-         
-        
+
+
         }
     }
 }

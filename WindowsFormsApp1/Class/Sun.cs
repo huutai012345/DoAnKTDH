@@ -27,18 +27,26 @@ namespace WindowsFormsApp1.Class
             mat1 = new HinhTron(10,new Point(p1.X-40, p1.Y-15), Color.Black);
             mat2 = new HinhTron(10,new Point(p1.X+40, p1.Y - 15), Color.Black);
         }
+        
         public void Draw(Graphics g)
         {
-            hinhTron.Draw(g);
+           // hinhTron.Draw(g);
             hinhTron.FillColor(g, Color.Yellow);
             mieng.Draw(g);
             mat1.Draw(g);
             mat2.Draw(g);
         }
 
-        public void Delete(Graphics g)
+        public void DeleteNgay(Graphics g)
         {
-            HinhTron ht1 = new HinhTron(this.radius, Transformations.TinhTien(p1, -5, 0), Color.FromArgb(62, 155, 244));
+            HinhTron ht1 = new HinhTron(this.radius, Transformations.TinhTien(p1, -1, 0), Color.FromArgb(30, 46, 60));
+            ht1.Draw(g);
+            
+        }
+
+        public void DeleteDem(Graphics g)
+        {
+            HinhTron ht1 = new HinhTron(this.radius, Transformations.TinhTien(p1, -1, 0), Color.FromArgb(62, 155, 244));
             ht1.Draw(g);
             
         }

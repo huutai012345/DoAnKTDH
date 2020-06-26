@@ -86,6 +86,11 @@ namespace WindowsFormsApp1.Class
 
             }
         }
+
+        public void FillColor(Graphics g, Color color)
+        {
+            g.FillEllipse(new SolidBrush(color), point.X - a, point.Y - b, 2 * a, 2 * b);
+        }
         public void DrawNetDut(Graphics g)
         {
             int x, y, cx, cy, a, b;

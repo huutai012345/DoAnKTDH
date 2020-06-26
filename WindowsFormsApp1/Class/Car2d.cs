@@ -19,6 +19,7 @@ namespace WindowsFormsApp1.Class
         private HinhThangCan nocxe;
         private Graphics g;
         private Line l1;
+        private HinhTron light;
 
         public Car2d(Graphics g)
         {
@@ -34,10 +35,11 @@ namespace WindowsFormsApp1.Class
             trucBanh2 = new Line(new Point(banh2.Point.X, banh2.Point.Y - banh2.Radius), new Point(banh2.Point.X, banh2.Point.Y + banh2.Radius), Color.Black);
 
             thanxe = new HinhChuNhat(new Point(banh1.Point.X-100, banh1.Point.Y-70), new Point(banh2.Point.X+100, banh2.Point.Y), Color.Black);
-            nocxe = new HinhThangCan(new Point(banh1.Point.X , banh1.Point.Y - 140), new Point(banh2.Point.X , banh2.Point.Y-70), Color.Black,30);
+            nocxe = new HinhThangCan(new Point(banh1.Point.X+20 , banh1.Point.Y - 140), new Point(banh2.Point.X +20, banh2.Point.Y-70), Color.Black,30);
 
-            l1 = new Line(new Point(banh1.Point.X + 60, banh1.Point.Y - 135), new Point(banh1.Point.X + 60, banh2.Point.Y-75), Color.Red);
-      
+            l1 = new Line(new Point(banh1.Point.X + 80, banh1.Point.Y - 135), new Point(banh1.Point.X + 80, banh2.Point.Y-75), Color.Red);
+
+            light = new HinhTron(10, new Point(banh1.Point.X - 70, banh1.Point.Y - 40), Color.Black);
         }
         public void Draw()
         {
@@ -62,7 +64,8 @@ namespace WindowsFormsApp1.Class
             trucBanh2.Draw(g);
 
             l1.Draw(g);
- 
+            light.Draw(g);
+            light.FillColor(g, Color.Red);
         }
 
         public void Draw1()
@@ -89,13 +92,11 @@ namespace WindowsFormsApp1.Class
 
         public void Quay()
         {
-            trucBanh1.A = Transformations.Quay(trucBanh1.A, banh1.Point, -10);
-            trucBanh1.B = Transformations.Quay(trucBanh1.B, banh1.Point, -10);
+            trucBanh1.A = Transformations.Quay(trucBanh1.A, banh1.Point, 10);
+            trucBanh1.B = Transformations.Quay(trucBanh1.B, banh1.Point,10);
 
-            trucBanh2.A = Transformations.Quay(trucBanh2.A, banh2.Point, -10);
-            trucBanh2.B = Transformations.Quay(trucBanh2.B, banh2.Point, -10);
-
-            
+            trucBanh2.A = Transformations.Quay(trucBanh2.A, banh2.Point, 10);
+            trucBanh2.B = Transformations.Quay(trucBanh2.B, banh2.Point, 10);
         }
 
         public void run()
