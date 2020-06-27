@@ -49,6 +49,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Class\Car2d.cs" />
     <Compile Include="Class\Car3d.cs" />
+    <Compile Include="Class\AirLane.cs" />
     <Compile Include="Class\Hinh1.cs" />
     <Compile Include="Class\HinhElip.cs" />
     <Compile Include="Class\HinhChuNhat.cs" />

@@ -17,12 +17,14 @@ namespace WindowsFormsApp1
 
         private Hinh1 hinh1;
         private Car3d hinh3;
+        private AirLane hinh4;
         public Form1()
         {
             InitializeComponent();
             g = this.panel2.CreateGraphics();
             hinh1 = new Hinh1(this.g);
             hinh3 = new Car3d();
+            hinh4 = new AirLane();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -147,6 +149,11 @@ namespace WindowsFormsApp1
                 timer2.Stop();
                 timer3.Stop();
             }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            hinh4.Draw(g);
         }
     }
 }

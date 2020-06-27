@@ -54,11 +54,13 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.button17 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button17);
             this.panel1.Controls.Add(this.button16);
             this.panel1.Controls.Add(this.button15);
             this.panel1.Controls.Add(this.button14);
@@ -93,9 +95,9 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(97, 82);
+            this.button15.Location = new System.Drawing.Point(16, 657);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.Size = new System.Drawing.Size(156, 40);
             this.button15.TabIndex = 16;
             this.button15.Text = "Car3d";
             this.button15.UseVisualStyleBackColor = true;
@@ -103,9 +105,9 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(3, 82);
+            this.button14.Location = new System.Drawing.Point(16, 611);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.Size = new System.Drawing.Size(156, 40);
             this.button14.TabIndex = 15;
             this.button14.Text = "Car2d";
             this.button14.UseVisualStyleBackColor = true;
@@ -208,7 +210,7 @@
             // 
             this.Clear.Location = new System.Drawing.Point(16, 885);
             this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(156, 50);
+            this.Clear.Size = new System.Drawing.Size(156, 62);
             this.Clear.TabIndex = 4;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
@@ -282,6 +284,16 @@
             // 
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(16, 564);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(156, 41);
+            this.button17.TabIndex = 18;
+            this.button17.Text = "Plane";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,6 +337,7 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer timer5;
+        private System.Windows.Forms.Button button17;
     }
 }
 
