@@ -16,6 +16,11 @@ namespace WindowsFormsApp1.Class
         public Point B { get => p2; set => p2 = value; }
         public Color ColorOfLine { get => color; set => color = value; }
 
+        public Line()
+        {
+
+        }
+
         public Line(Point a, Point b, Color color)
         {
             this.A = a;
@@ -46,7 +51,7 @@ namespace WindowsFormsApp1.Class
                 while (step > 0)
                 {
 
-                    ToaDo.HienThi(x, y, g, Color.White);
+                    Pixel.HienThi(x, y, g, Color.White);
                     x += delta_X;
                     y += delta_Y;
                     step--;
@@ -78,7 +83,7 @@ namespace WindowsFormsApp1.Class
                 while (step > 0)
                 {
 
-                    ToaDo.HienThi(x, y, g, color);
+                    Pixel.HienThi(x, y, g, color);
                     x += delta_X;
                     y += delta_Y;
                     step--;
@@ -112,7 +117,7 @@ namespace WindowsFormsApp1.Class
                 while (step > 0)
                 {
 
-                    ToaDo.HienThi(x, y, g, color);
+                    Pixel.HienThi(x, y, g, color);
                     x += delta_X;
                     y += delta_Y;
                     step--;

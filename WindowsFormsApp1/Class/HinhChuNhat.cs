@@ -37,7 +37,7 @@ namespace WindowsFormsApp1.Class
 
         public void FillColor(Graphics g, Color c)
         {
-            Point[] curvePoints = { this.A, this.B, this.C, this.D };
+            Point[] curvePoints = { A,B,C,D };
             g.FillPolygon(new SolidBrush(c), curvePoints);
         }
 

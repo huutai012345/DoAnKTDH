@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace WindowsFormsApp1.Class
 {
-    class ToaDo
+    class Pixel
     {   
         public static int RoundPixel(float p)
         {
@@ -47,7 +47,9 @@ namespace WindowsFormsApp1.Class
             //g.DrawEllipse(p1, pointX - 2, pointY, 2, 2);
             //g.FillEllipse(b, pointX - 2, pointY, 2, 2);
 
-            g.FillRectangle(b, p.X - 2, p.Y - 2, 5, 5);
+            //g.FillRectangle(b, pointX - 4, pointY - 4, 4, 4);
+
+            g.FillRectangle(b, p.X - 4, p.Y - 4, 4, 4);
         }
         
         public static void HienThi(float x, float y, Graphics g, Color color)
@@ -67,7 +69,9 @@ namespace WindowsFormsApp1.Class
             //g.DrawEllipse(p1, pointX - 2, pointY, 2, 2);
             //g.FillEllipse(b, pointX - 2, pointY, 2, 2);
 
-            g.FillRectangle(b, x -2, y-2 , 5, 5);
+            //g.FillRectangle(b, pointX -4, pointY-4 , 4, 4);
+
+            g.FillRectangle(b, x - 4, y - 4, 4, 4);
         }
     }
 }

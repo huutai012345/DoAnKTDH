@@ -16,21 +16,21 @@ namespace WindowsFormsApp1.Class
         private Color color { get; set; }
         public void Drawn4Point(int x, int y, Graphics g)
         {
-            ToaDo.HienThi(new Point(point.X + x, point.Y + y), g, color);
-            ToaDo.HienThi(new Point(point.X - x, point.Y + y), g, color);
-            ToaDo.HienThi(new Point(point.X - x, point.Y - y), g, color);
-            ToaDo.HienThi(new Point(point.X + x, point.Y - y), g, color);
+            Pixel.HienThi(new Point(point.X + x, point.Y + y), g, color);
+            Pixel.HienThi(new Point(point.X - x, point.Y + y), g, color);
+            Pixel.HienThi(new Point(point.X - x, point.Y - y), g, color);
+            Pixel.HienThi(new Point(point.X + x, point.Y - y), g, color);
         }
         public void Drawn4Point_3D(int x, int y, Graphics g)
         {
             if (x % 10 != 0)
             {
-                ToaDo.HienThi(new Point(point.X - x, point.Y - y), g, color);
-                ToaDo.HienThi(new Point(point.X + x, point.Y - y), g, color);
+                Pixel.HienThi(new Point(point.X - x, point.Y - y), g, color);
+                Pixel.HienThi(new Point(point.X + x, point.Y - y), g, color);
             }
 
-            ToaDo.HienThi(new Point(point.X + x, point.Y + y), g, color);
-            ToaDo.HienThi(new Point(point.X - x, point.Y + y), g, color);
+            Pixel.HienThi(new Point(point.X + x, point.Y + y), g, color);
+            Pixel.HienThi(new Point(point.X - x, point.Y + y), g, color);
         }
         public void Draw(Graphics g)
         {
@@ -64,7 +64,7 @@ namespace WindowsFormsApp1.Class
                     p += B + Dx - Dy;
                 }
                 if (x % 5 == 0)
-                    Drawn4Point(x, ToaDo.RoundPixel(y), g);
+                    Drawn4Point(x, y, g);
 
 
             }
@@ -82,16 +82,16 @@ namespace WindowsFormsApp1.Class
                     p += A - Dy + Dx;
                 }
                 if (x % 5 == 0)
-                    Drawn4Point(x, ToaDo.RoundPixel(y), g);
+                    Drawn4Point(x, y, g);
 
             }
         }
 
         public void FillColor(Graphics g, Color color)
         {
-            g.FillEllipse(new SolidBrush(color), point.X - a, point.Y - b, 2 * a, 2 * b);
+            g.FillEllipse(new SolidBrush(color), point.X - a-5, point.Y - b-5, 2 * a+5, 2 * b+5);
         }
-        public void DrawNetDut(Graphics g)
+        public void Draw3d(Graphics g)
         {
             int x, y, cx, cy, a, b;
             cx = this.point.X;
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1.Class
                     p += B + Dx - Dy;
                 }
                 if (x % 5 == 0)
-                    Drawn4Point_3D(x, ToaDo.RoundPixel(y), g);
+                    Drawn4Point_3D(x,y, g);
 
 
             }
@@ -141,7 +141,7 @@ namespace WindowsFormsApp1.Class
                     p += A - Dy + Dx;
                 }
                 if (x % 5 == 0)
-                    Drawn4Point_3D(x, ToaDo.RoundPixel(y), g);
+                    Drawn4Point_3D(x, y, g);
 
             }
         }
@@ -151,6 +151,11 @@ namespace WindowsFormsApp1.Class
             this.a = a * 5;
             this.b = b * 5;
             this.color = color;
+        }
+
+        public HinhElip()
+        {
+            
         }
     }
 }

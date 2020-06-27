@@ -27,14 +27,14 @@ namespace WindowsFormsApp1.Class
 
         public void Drawn8Point(int x, int y, Graphics g, Color color)
         {
-            ToaDo.HienThi(x + p.X, y + p.Y, g, color);
-            ToaDo.HienThi(y + p.X, x + p.Y, g, color);
-            ToaDo.HienThi(-x + p.X, -y + p.Y, g, color);
-            ToaDo.HienThi(-y + p.X, -x + p.Y, g, color);
-            ToaDo.HienThi(-x + p.X, y + p.Y, g, color);
-            ToaDo.HienThi(-y + p.X, x + p.Y, g, color);
-            ToaDo.HienThi(x + p.X, -y + p.Y, g, color);
-            ToaDo.HienThi(y + p.X, -x + p.Y, g, color);
+            Pixel.HienThi(x + p.X, y + p.Y, g, color);
+            Pixel.HienThi(y + p.X, x + p.Y, g, color);
+            Pixel.HienThi(-x + p.X, -y + p.Y, g, color);
+            Pixel.HienThi(-y + p.X, -x + p.Y, g, color);
+            Pixel.HienThi(-x + p.X, y + p.Y, g, color);
+            Pixel.HienThi(-y + p.X, x + p.Y, g, color);
+            Pixel.HienThi(x + p.X, -y + p.Y, g, color);
+            Pixel.HienThi(y + p.X, -x + p.Y, g, color);
         }
 
         public HinhTron(int bk, Point tamht, Color m)
@@ -85,7 +85,7 @@ namespace WindowsFormsApp1.Class
 
         public void Delete(Graphics g)
         {
-            g.FillEllipse(new SolidBrush(Color.White), this.p.X - radius-5, this.p.Y - radius-5, radius * 2+10, radius * 2+10);
+            g.FillEllipse(new SolidBrush(Color.White), this.p.X - radius+5, this.p.Y - radius+5, radius * 2, radius * 2);
         }
 
         public void DeleteCus(Graphics g,Color color)
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1.Class
         public void FillColor(Graphics g,Color color)
         {
             //Point p = ToaDo
-            g.FillEllipse(new SolidBrush(color), this.p.X-radius , this.p.Y-radius , radius * 2 , radius * 2 );
+            g.FillEllipse(new SolidBrush(color), this.p.X-radius , this.p.Y-radius , radius * 2-5 , radius * 2-5 );
             
         }
     }

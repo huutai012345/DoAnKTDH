@@ -21,8 +21,23 @@ namespace WindowsFormsApp1.Class
         private Line truc5;
         private Line truc6;
 
-        private HinhElip banhTrc;
-        private HinhElip banhSau;
+        private HinhElip banhTrc = new HinhElip();
+        private HinhElip banhSau = new HinhElip();
+
+        public Car3d()
+        {
+            A = new Point(-1, -1);
+            B = new Point(-1, -1);
+            C = new Point(-1, -1);
+            banhTrc = new HinhElip();
+            banhSau = new HinhElip();
+            truc1 = new Line();
+            truc2 = new Line();
+            truc3 = new Line();
+            truc4 = new Line();
+            truc5 = new Line();
+            truc6 = new Line();
+        }
 
         public void DrawEllipse(Point p1, Graphics g, int x, int y)
         {
@@ -56,25 +71,33 @@ namespace WindowsFormsApp1.Class
 
         public void fillColorRight(Graphics g, Color c)
         {
-            A = new Point(850, 150); B = new Point(900, 160); C = new Point(870, 180);
+            A = new Point(850, 150); 
+            B = new Point(900, 160); 
+            C = new Point(870, 180);
             Point[] curvePoints = { A, B, C };
             g.FillPolygon(new SolidBrush(c), curvePoints);
-            A = new Point(850, 150); B = new Point(820, 170); C = new Point(870, 180);
+            A = new Point(850, 150); 
+            B = new Point(820, 170); 
+            C = new Point(870, 180);
             curvePoints = new Point[] { A, B, C };
             g.FillPolygon(new SolidBrush(c), curvePoints);
         }
 
         public void fillColorLeft(Graphics g, Color r)
         {
-            A = new Point(925, 162); B = new Point(890, 185); C = new Point(970, 170);
+            A = new Point(925, 162); 
+            B = new Point(890, 185); 
+            C = new Point(970, 170);
             Point[] curvePoints = { A, B, C };
             g.FillPolygon(new SolidBrush(r), curvePoints);
-            A = new Point(950, 195); B = new Point(890, 185); C = new Point(970, 170);
+            A = new Point(950, 195); 
+            B = new Point(890, 185); 
+            C = new Point(970, 170);
             curvePoints = new Point[] { A, B, C };
             g.FillPolygon(new SolidBrush(r), curvePoints);
         }
 
-        public void RotateBanhTrc(Graphics g)
+        public void RotateBanhXe(Graphics g)
         {
             banhTrc.FillColor(g, Color.White);
             banhSau.FillColor(g, Color.White);

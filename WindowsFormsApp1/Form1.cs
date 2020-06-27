@@ -14,37 +14,50 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         private Graphics g;
-      
-        private Hinh1 d;
-        private Car3d c3d;
+
+        private Hinh1 hinh1;
+        private Car3d hinh3;
         public Form1()
         {
             InitializeComponent();
             g = this.panel2.CreateGraphics();
-         
-            d = new Hinh1(this.g);
-            c3d = new Car3d();
+            hinh1 = new Hinh1(this.g);
+            hinh3 = new Car3d();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(!timer1.Enabled)
+            if (!timer1.Enabled)
             {
                 this.timer1.Start();
-                this.timer2.Start();
+                
             }
             else
             {
                 this.timer1.Stop();
-                this.timer2.Stop();
+     
             }
-            
         }
 
         public void drawHeToaDo()
         {
             Graphics g = this.panel2.CreateGraphics();
-        
+
+            for (int i = 0; i <= 320; i++)
+            {
+                g.DrawLine(new Pen(Color.Pink), 5 * i, 0, 5 * i, 1360);
+                g.DrawLine(new Pen(Color.Pink), 0, 5 * i, 1360, 5 * i);
+            }
+
+            g.DrawLine(new Pen(Color.Red), 680, 0, 680, 385);
+            g.DrawLine(new Pen(Color.Red), 680, 385, 1360, 385);
+         
+        }
+
+        public void drawHeToaDo3d()
+        {
+            Graphics g = this.panel2.CreateGraphics();
+
             for (int i = 0; i <= 320; i++)
             {
                 g.DrawLine(new Pen(Color.Pink), 5 * i, 0, 5 * i, 1360);
@@ -54,37 +67,86 @@ namespace WindowsFormsApp1
             g.DrawLine(new Pen(Color.Red), 680, 0, 680, 385);
             g.DrawLine(new Pen(Color.Red), 680, 385, 1360, 385);
             g.DrawLine(new Pen(Color.Red), 680, 385, 0, 770);
-            // SolidBrush brush = new SolidBrush(Color.DarkSlateBlue);
-
-            //g.DrawLine(new Pen(Color.Red), 0, 330, 1230, 330);
-            //g.DrawLine(new Pen(Color.Red), 470, 0, 470, 1230);
         }
-      
+
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
-            this.drawHeToaDo();
-
-            //d.DrawNgay();
-            c3d.Draw(g);
+          //  this.drawHeToaDo();
         }
 
-      
         private void timer1_Tick(object sender, EventArgs e)
         {
-            // Console.WriteLine("a");
-            c3d.DrawLightYellow(g);
-            c3d.RotateBanhTrc(g);
-           // d.run();
+            hinh1.run();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            //Console.WriteLine("b");
-            c3d.DrawLightGray(g);
-
+            hinh3.DrawLightGray(g);
+            hinh3.DrawLightYellow(g);
+            hinh3.RotateBanhXe(g);
         }
 
-      
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            hinh3.DrawLightGray(g);
+        }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            hinh3.DrawLightGray(g);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.panel2.Refresh();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.panel2.Refresh();
+            this.drawHeToaDo();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            this.panel2.Refresh();
+            this.drawHeToaDo3d();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.panel2.Refresh();
+            hinh1.DrawNgay();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.panel2.Refresh();
+            hinh3.Draw(g);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            hinh1.DrawNgay();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            hinh3.Draw(g);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(!timer2.Enabled)
+            {
+                timer2.Start();
+                timer3.Start();
+            }
+            else
+            {
+                timer2.Stop();
+                timer3.Stop();
+            }
+        }
     }
 }
