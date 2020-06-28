@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        public void drawHeToaDo()
+        public void drawHeToaDo2d()
         {
             Graphics g = this.panel2.CreateGraphics();
 
@@ -106,7 +106,7 @@ namespace WindowsFormsApp1
         private void button6_Click(object sender, EventArgs e)
         {
             this.panel2.Refresh();
-            this.drawHeToaDo();
+            this.drawHeToaDo2d();
         }
 
         private void button5_Click_1(object sender, EventArgs e)
