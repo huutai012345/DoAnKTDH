@@ -66,12 +66,12 @@ namespace WindowsFormsApp1
 
             g.DrawLine(new Pen(Color.Red), 680, 0, 680, 385);
             g.DrawLine(new Pen(Color.Red), 680, 385, 1360, 385);
-            g.DrawLine(new Pen(Color.Red), 680, 385, 0, 770);
+            g.DrawLine(new Pen(Color.Red), 680, 385, 0, 1050);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-          //  this.drawHeToaDo();
+            //  this.drawHeToaDo();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -147,6 +147,69 @@ namespace WindowsFormsApp1
                 timer2.Stop();
                 timer3.Stop();
             }
+        }
+
+        private void Box_Click(object sender, EventArgs e)
+        {
+            this.panel2.Refresh();
+            this.drawHeToaDo3d();
+            int x = int.Parse(textX.Text);
+            int y = int.Parse(textY.Text);
+            int z = int.Parse(textZ.Text);
+            int length = int.Parse(textLength.Text);
+            Box b = new Box(length, x, y, z, Color.Black);
+            b.Draw(g);
+            AX.Text = x + ""; AY.Text = y + ""; AZ.Text = z + "";
+            BX.Text = x + ""; BY.Text = y + ""; BZ.Text = (z + length) + "";
+            CX.Text = (x) + ""; CY.Text = (y + length) + ""; CZ.Text = (z) + "";
+            DX.Text = (x) + ""; DY.Text = (y + length) + ""; DZ.Text = (z + length) + "";
+            EX.Text = (x + length) + ""; EY.Text = (y) + ""; EZ.Text = (z) + "";
+            FX.Text = (x + length) + ""; FY.Text = (y + length) + ""; FZ.Text = (z) + "";
+            HX.Text = (x + length) + ""; HY.Text = (y) + ""; HZ.Text = (z + length) + "";
+            JX.Text = (x + length) + ""; JY.Text = (y + length) + ""; JZ.Text = (z + length) + "";
+        }
+
+        private void Pyramid_Click(object sender, EventArgs e)
+        {
+            this.panel2.Refresh();
+            this.drawHeToaDo3d();
+            int x = int.Parse(textX.Text);
+            int y = int.Parse(textY.Text);
+            int z = int.Parse(textZ.Text);
+            int length = int.Parse(textLength.Text);
+            int height = int.Parse(textHeight.Text);
+            Pyramid p = new Pyramid(height, length, x, y, z);
+            p.Draw(g);
+            length = length / 2;
+            AX.Text = (x) + ""; AY.Text = (y) + ""; AZ.Text = (z + length) + "";
+            BX.Text = (x + length) + ""; BY.Text = (y - length) + ""; BZ.Text = (z) + "";
+            CX.Text = (x - length) + ""; CY.Text = (y - length) + ""; CZ.Text = (z) + "";
+            DX.Text = (x - length) + ""; DY.Text = (y + length) + ""; DZ.Text = (z) + "";
+            EX.Text = (x + length) + ""; EY.Text = (y + length) + ""; EZ.Text = (z) + "";
+            FX.Text = "-"; FY.Text = "-"; FZ.Text = "-";
+            HX.Text = "-"; HY.Text = "-"; HZ.Text = "-";
+            JX.Text = "-"; JY.Text = "-"; JZ.Text = "-";
+        }
+
+        private void Conical_Click(object sender, EventArgs e)
+        {
+            this.panel2.Refresh();
+            this.drawHeToaDo3d();
+            int x = int.Parse(textX.Text);
+            int y = int.Parse(textY.Text);
+            int z = int.Parse(textZ.Text);
+            int r = int.Parse(textLength.Text) / 2;
+            int h = int.Parse(textHeight.Text);
+            Conical c = new Conical(r, h, x, y, z, Color.Black);
+            c.Draw(g);
+            AX.Text = (x) + ""; AY.Text = (y) + ""; AZ.Text = (z + h) + "";
+            BX.Text = "-"; BY.Text = "-"; BZ.Text = "-";
+            CX.Text = "-"; CY.Text = "-"; CZ.Text = "-";
+            DX.Text = "-"; DY.Text = "-"; DZ.Text = "-";
+            EX.Text = "-"; EY.Text = "-"; EZ.Text = "-";
+            FX.Text = "-"; FY.Text = "-"; FZ.Text = "-";
+            HX.Text = "-"; HY.Text = "-"; HZ.Text = "-";
+            JX.Text = "-"; JY.Text = "-"; JZ.Text = "-";
         }
     }
 }
