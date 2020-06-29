@@ -97,7 +97,7 @@ namespace WindowsFormsApp1.Class
         public void FillColor(Graphics g,Color color)
         {
             //Point p = ToaDo
-            g.FillEllipse(new SolidBrush(color), this.p.X-radius , this.p.Y-radius , radius * 2-5 , radius * 2-5 );
+            g.FillEllipse(new SolidBrush(color), this.p.X-radius -5, this.p.Y-radius-5 , radius * 2+5 , radius * 2+5 );
             
         }
     }

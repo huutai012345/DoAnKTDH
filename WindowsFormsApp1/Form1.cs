@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,7 @@ namespace WindowsFormsApp1
         private Point p3;
 
         private Hinh1 hinh1;
+        private Universe hinh2;
         private Car3d hinh3;
         private AirLane hinh4;
         public Form1()
@@ -31,6 +33,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             g = this.panel2.CreateGraphics();
             hinh1 = new Hinh1(this.g);
+            hinh2 = new Universe(this.g);
             hinh3 = new Car3d();
             hinh4 = new AirLane();
 
@@ -45,7 +48,7 @@ namespace WindowsFormsApp1
           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // run
         {
 
             if(this.play==1)
@@ -54,7 +57,17 @@ namespace WindowsFormsApp1
             }
             else if (this.play == 2)
             {
-              
+                
+
+                if (!timer4.Enabled)
+                {
+                    this.timer4.Start();
+                }
+                else
+                {
+                    this.timer4.Stop();
+                    
+                }
             }
             else if (this.play == 3) //car 2d
             {
@@ -65,7 +78,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     this.timer1.Stop();
-                    this.play = 0;
+                    
                 }
             }
             else if(this.play ==4) // car3d
@@ -79,7 +92,7 @@ namespace WindowsFormsApp1
                 {
                     this.timer2.Stop();
                     this.timer3.Stop();
-                    this.play = 0;
+                    
                 }
             }
          
@@ -139,7 +152,7 @@ namespace WindowsFormsApp1
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-            hinh3.DrawLightGray(g);
+            hinh2.run();
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -175,6 +188,11 @@ namespace WindowsFormsApp1
 
         private void button14_Click(object sender, EventArgs e)
         {
+            this.timer1.Stop();
+            this.timer2.Stop();
+            this.timer3.Stop();
+            this.timer4.Stop();
+
             this.panel2.Refresh();
             this.play = 3;
             hinh1 = new Hinh1(g);
@@ -183,9 +201,41 @@ namespace WindowsFormsApp1
 
         private void button15_Click(object sender, EventArgs e)
         {
+            this.timer1.Stop();
+            this.timer2.Stop();
+            this.timer3.Stop();
+            this.timer4.Stop();
+
             this.panel2.Refresh();
             this.play = 4;
+            hinh3 = new Car3d();
             hinh3.Draw(g);
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            this.timer1.Stop();
+            this.timer2.Stop();
+            this.timer3.Stop();
+            this.timer4.Stop();
+
+            this.panel2.Refresh();
+            this.play = 1;
+            hinh4 = new AirLane();
+            hinh4.Draw(g);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.timer1.Stop();
+            this.timer2.Stop();
+            this.timer3.Stop();
+            this.timer4.Stop();
+
+            this.panel2.Refresh();
+            this.play = 2;
+            hinh2 = new Universe(g);
+            hinh2.draw();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -200,19 +250,6 @@ namespace WindowsFormsApp1
                 timer2.Stop();
                 timer3.Stop();
             }
-        }
-
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-            this.panel2.Refresh();
-            this.play = 2;
-            hinh4.Draw(g);
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            this.play = 1;
         }
 
         private void button3_Click(object sender, EventArgs e) //hinh cn
