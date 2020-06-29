@@ -23,7 +23,7 @@ namespace WindowsFormsApp1.Class
             this.p1 = p1;
             this.radius = radius;
             hinhTron = new HinhTron(radius, p1, Color.Black);
-            mieng = new HinhElip(new Point(this.hinhTron.Point.X,this.hinhTron.Point.Y+30), 5, 2, Color.Black);
+            mieng = new HinhElip(new Point(this.hinhTron.Point.X,this.hinhTron.Point.Y+30), 25, 10, Color.Black);
             mat1 = new HinhTron(10,new Point(p1.X-40, p1.Y-15), Color.Black);
             mat2 = new HinhTron(10,new Point(p1.X+40, p1.Y - 15), Color.Black);
         }

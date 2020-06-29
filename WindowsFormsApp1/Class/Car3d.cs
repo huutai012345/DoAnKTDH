@@ -196,11 +196,11 @@ namespace WindowsFormsApp1.Class
             A.X = 730 - temp;
             A.Y = 610;
 
-            banhTrc = new HinhElip(A, 12, 14, Color.Black);
+            banhTrc = new HinhElip(A, 60, 70, Color.Black);
             banhTrc.Draw(g);
             banhTrc.FillColor(g, Color.Black);
            
-            banhTrc = new HinhElip(A, 8, 10, Color.Black);
+            banhTrc = new HinhElip(A, 40, 50, Color.Black);
             banhTrc.Draw(g);
             banhTrc.FillColor(g, Color.White);
 
@@ -227,11 +227,11 @@ namespace WindowsFormsApp1.Class
             A.Y = 420; 
           
 
-            banhSau = new HinhElip(A, 12, 14, Color.Black);
+            banhSau = new HinhElip(A, 60, 70, Color.Black);
             banhSau.Draw(g);
             banhSau.FillColor(g, Color.Black);
 
-            banhSau = new HinhElip(A, 8, 10, Color.Black);
+            banhSau = new HinhElip(A, 40, 50, Color.Black);
             banhSau.Draw(g);
             banhSau.FillColor(g, Color.White);
 

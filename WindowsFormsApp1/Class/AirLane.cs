@@ -81,9 +81,9 @@ namespace WindowsFormsApp1.Class
             int a = -1, b = -1;
             HinhElip e = new HinhElip(A, a, b, Color.Black);
 
-            A = new Point(100, 100); a = 40; b = 20; e = new HinhElip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
-            A = new Point(500, 200); a = 20; b = 10; e = new HinhElip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
-            A = new Point(1000, 700); a = 30; b = 15; e = new HinhElip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
+            A = new Point(100, 100); a = 200; b = 100; e = new HinhElip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
+            A = new Point(500, 200); a = 100; b = 50; e = new HinhElip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
+            A = new Point(1000, 700); a = 150; b = 75; e = new HinhElip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
         }
 
         public void Sun(Graphics g)

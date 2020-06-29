@@ -73,17 +73,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -92,6 +93,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\airport_30px.png" />
+    <Content Include="Resource\car_48px.png" />
+    <Content Include="Resource\car_50px.png" />
+    <Content Include="Resource\cone.png" />
+    <Content Include="Resource\cube.png" />
+    <Content Include="Resource\cube_24px.png" />
+    <Content Include="Resource\cylinder.png" />
+    <Content Include="Resource\eclip_32px.png" />
+    <Content Include="Resource\galaxy_48px.png" />
+    <Content Include="Resource\icons8_broom_64px_2.png" />
+    <Content Include="Resource\icons8_line_26px.png" />
+    <Content Include="Resource\icons8_play_button_circled_64px.png" />
+    <Content Include="Resource\rectangular_32px.png" />
+    <Content Include="Resource\round_50px.png" />
+    <Content Include="Resource\triangle_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

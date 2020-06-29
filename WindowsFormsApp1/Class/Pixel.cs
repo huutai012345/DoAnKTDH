@@ -73,5 +73,14 @@ namespace WindowsFormsApp1.Class
 
             g.FillRectangle(b, x - 4, y - 4, 4, 4);
         }
+
+        public static int distancePoint(Point p1,Point p2)
+        {
+            double Dx, Dy;
+            Dx = Math.Pow( p2.X - p1.X,2);
+            Dy = Math.Pow(p2.Y - p1.Y,2);
+
+            return Pixel.RoundPixel((float)Math.Sqrt(Dx + Dy));
+        }
     }
 }

@@ -34,13 +34,9 @@ namespace WindowsFormsApp1.Class
         }
         public void Draw(Graphics g)
         {
-            int x, y, cx, cy, a, b;
-            cx = this.point.X;
-            cy = this.point.Y;
-            a = this.a;
-            b = this.b;
-            x = 0;
-            y = b;
+            int x, y ;
+          
+            x = 0; y = b;
             int A, B;
             A = a * a;
             B = b * b;
@@ -49,38 +45,40 @@ namespace WindowsFormsApp1.Class
             y = b;
             int Dx = 0;
             int Dy = 2 * A * y;
-            Drawn4Point(x, y, g);
+            Drawn4Point(x, y,g);
 
-            while (Dx <= Dy)
+            while (Dx < Dy)
             {
-                x += 1;
+                x++;
                 Dx += 2 * B;
                 if (p < 0)
                     p += B + Dx;
                 else
                 {
-                    y -= 1;
+                    y--;
                     Dy -= 2 * A;
                     p += B + Dx - Dy;
                 }
+               
                 if (x % 5 == 0)
                     Drawn4Point(x, y, g);
 
 
             }
             p = Math.Round(B * (x + 0.5f) * (x + 0.5f) + A * (y - 1) * (y - 1) - A * B);
-            while (y >= 0)
+            while (y > 0)
             {
-                y -= 1;
+                y--;
                 Dy -= A * 2;
                 if (p > 0)
                     p += A - Dy;
                 else
                 {
-                    x += 1;
+                    x++;
                     Dx += B * 2;
                     p += A - Dy + Dx;
                 }
+               
                 if (x % 5 == 0)
                     Drawn4Point(x, y, g);
 
@@ -148,8 +146,8 @@ namespace WindowsFormsApp1.Class
         public HinhElip(Point point, int a, int b, Color color)
         {
             this.point = point;
-            this.a = a * 5;
-            this.b = b * 5;
+            this.a = a ;
+            this.b = b ;
             this.color = color;
         }
 
