@@ -112,12 +112,12 @@ namespace WindowsFormsApp1
 
             g.DrawLine(new Pen(Color.Red), 680, 0, 680, 385);
             g.DrawLine(new Pen(Color.Red), 680, 385, 1360, 385);
-            g.DrawLine(new Pen(Color.Red), 680, 385, 0, 770);
+            g.DrawLine(new Pen(Color.Red), 680, 385, 0, 1050);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -201,6 +201,7 @@ namespace WindowsFormsApp1
                 timer3.Stop();
             }
         }
+
 
         private void button17_Click(object sender, EventArgs e)
         {
@@ -381,6 +382,6 @@ namespace WindowsFormsApp1
 
         }
 
-      
+
     }
 }

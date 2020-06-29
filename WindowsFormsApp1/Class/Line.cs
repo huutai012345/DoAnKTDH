@@ -125,5 +125,44 @@ namespace WindowsFormsApp1.Class
                 }
             }
         }
+
+        public void DrawNetChamDut(Graphics g)
+        {
+                        int Dx, Dy, step;
+            Dx = p2.X - p1.X;
+            Dy = p2.Y - p1.Y;
+            if (Math.Abs(Dy) > Math.Abs(Dx)) step = Math.Abs(Dy);
+            else step = Math.Abs(Dx);
+
+            float x, y, delta_X, delta_Y;
+            if (step > 0)
+            {
+                delta_X = Dx;
+                delta_X /= step;
+
+                delta_Y = Dy;
+                delta_Y /= step;
+
+                x = p1.X;
+                y = p1.Y;
+                int k = 0;
+                while (step > 0)
+                {
+                    if (k < 10)
+                    {
+                        Pixel.HienThi(x, y, g, color);
+                    }
+                    else if (k == 20)
+                    {
+                        k = 0;
+                    }
+
+                    x += delta_X;
+                    y += delta_Y;
+                    step--;
+                    k++;
+                }
+            }
+        }
     }
 }
