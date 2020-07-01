@@ -40,7 +40,7 @@ namespace WindowsFormsApp1.Class
         public Conical(int r, int h, int x, int y, int z, Color color)
         {
             this.color = color;
-            this.r = r;
+            this.r = r*5;
             x = x * 5; y = y * 5; z = z * 5; h = h * 5; r = r * 5;
             this.I = new Point(changeX3Dto2D(x, y, z), changeY3Dto2D(x, y, z));
             this.p1 = new Point(changeX3Dto2D(x, y, z + h), changeY3Dto2D(x, y, z + h));

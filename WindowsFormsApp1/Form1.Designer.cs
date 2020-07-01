@@ -31,20 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonHinhChop = new System.Windows.Forms.Button();
+            this.buttonHinhCau = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.timer5 = new System.Windows.Forms.Timer(this.components);
-            this.buttonHinhChop = new System.Windows.Forms.Button();
-            this.buttonHinhCau = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
@@ -56,9 +47,18 @@
             this.btnHTG = new System.Windows.Forms.Button();
             this.btnEclip = new System.Windows.Forms.Button();
             this.btnHTron = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.btnHCN = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +93,28 @@
             this.panel1.Size = new System.Drawing.Size(204, 950);
             this.panel1.TabIndex = 0;
             // 
+            // buttonHinhChop
+            // 
+            this.buttonHinhChop.Image = global::WindowsFormsApp1.Properties.Resources.hinhchop;
+            this.buttonHinhChop.Location = new System.Drawing.Point(7, 280);
+            this.buttonHinhChop.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonHinhChop.Name = "buttonHinhChop";
+            this.buttonHinhChop.Size = new System.Drawing.Size(60, 50);
+            this.buttonHinhChop.TabIndex = 23;
+            this.buttonHinhChop.UseVisualStyleBackColor = true;
+            this.buttonHinhChop.Click += new System.EventHandler(this.buttonHinhChop_Click);
+            // 
+            // buttonHinhCau
+            // 
+            this.buttonHinhCau.Image = global::WindowsFormsApp1.Properties.Resources.hinhcaupng;
+            this.buttonHinhCau.Location = new System.Drawing.Point(72, 280);
+            this.buttonHinhCau.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonHinhCau.Name = "buttonHinhCau";
+            this.buttonHinhCau.Size = new System.Drawing.Size(60, 50);
+            this.buttonHinhCau.TabIndex = 22;
+            this.buttonHinhCau.UseVisualStyleBackColor = true;
+            this.buttonHinhCau.Click += new System.EventHandler(this.buttonHinhCau_Click);
+            // 
             // button2
             // 
             this.button2.Image = global::WindowsFormsApp1.Properties.Resources.star_32px;
@@ -121,92 +143,6 @@
             this.label2.Size = new System.Drawing.Size(26, 17);
             this.label2.TabIndex = 19;
             this.label2.Text = "2D";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 39);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Nhóm 7";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(4, 622);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(97, 40);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "2D";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(109, 622);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(90, 40);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "3D";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(230, 21);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1790, 950);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 50;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 170;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // timer4
-            // 
-            this.timer4.Interval = 200;
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
-            // buttonHinhChop
-            // 
-            this.buttonHinhChop.Image = global::WindowsFormsApp1.Properties.Resources.hinhchop;
-            this.buttonHinhChop.Location = new System.Drawing.Point(7, 280);
-            this.buttonHinhChop.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonHinhChop.Name = "buttonHinhChop";
-            this.buttonHinhChop.Size = new System.Drawing.Size(60, 50);
-            this.buttonHinhChop.TabIndex = 23;
-            this.buttonHinhChop.UseVisualStyleBackColor = true;
-            this.buttonHinhChop.Click += new System.EventHandler(this.buttonHinhChop_Click);
-            // 
-            // buttonHinhCau
-            // 
-            this.buttonHinhCau.Image = global::WindowsFormsApp1.Properties.Resources.hinhcaupng;
-            this.buttonHinhCau.Location = new System.Drawing.Point(72, 280);
-            this.buttonHinhCau.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonHinhCau.Name = "buttonHinhCau";
-            this.buttonHinhCau.Size = new System.Drawing.Size(60, 50);
-            this.buttonHinhCau.TabIndex = 22;
-            this.buttonHinhCau.UseVisualStyleBackColor = true;
-            this.buttonHinhCau.Click += new System.EventHandler(this.buttonHinhCau_Click);
             // 
             // button17
             // 
@@ -329,6 +265,39 @@
             this.btnHTron.UseVisualStyleBackColor = true;
             this.btnHTron.Click += new System.EventHandler(this.button7_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 39);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Nhóm 7";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(4, 622);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(97, 40);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "2D";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(109, 622);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(90, 40);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "3D";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Clear
             // 
             this.Clear.Image = global::WindowsFormsApp1.Properties.Resources.icons8_broom_64px_2;
@@ -361,6 +330,37 @@
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(230, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1790, 950);
+            this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 170;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Interval = 200;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // Form1
             // 

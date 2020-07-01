@@ -414,33 +414,34 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.Show();
-        }
-
         private void button12_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(g, 1);
             form2.Show();
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(g,2);
             form2.Show();
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(g, 3);
+            form2.Show();
+        }
+
+
         private void buttonHinhChop_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(g,4);
             form2.Show();
         }
 
         private void buttonHinhCau_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(g,5);
             form2.Show();
         }
     }
