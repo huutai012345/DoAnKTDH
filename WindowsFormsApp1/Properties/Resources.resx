@@ -133,6 +133,9 @@
   <data name="cylinder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\cylinder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hinhcaupng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\hinhcaupng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="triangle_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\triangle_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,6 +144,9 @@
   </data>
   <data name="icons8_line_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\icons8_line_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hinhchop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\hinhchop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="car_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\car_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -162,5 +168,8 @@
   </data>
   <data name="cube" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\cube.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\star_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

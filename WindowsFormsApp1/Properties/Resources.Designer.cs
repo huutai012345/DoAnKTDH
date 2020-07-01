@@ -153,6 +153,26 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hinhcaupng {
+            get {
+                object obj = ResourceManager.GetObject("hinhcaupng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hinhchop {
+            get {
+                object obj = ResourceManager.GetObject("hinhchop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_broom_64px_2 {
             get {
                 object obj = ResourceManager.GetObject("icons8_broom_64px_2", resourceCulture);
@@ -196,6 +216,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap round_50px {
             get {
                 object obj = ResourceManager.GetObject("round_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap star_32px {
+            get {
+                object obj = ResourceManager.GetObject("star_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

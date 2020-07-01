@@ -431,5 +431,17 @@ namespace WindowsFormsApp1
             Form2 form2 = new Form2();
             form2.Show();
         }
+
+        private void buttonHinhChop_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void buttonHinhCau_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
     }
 }

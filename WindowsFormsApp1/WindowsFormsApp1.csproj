@@ -117,11 +117,14 @@
     <Content Include="Resource\cylinder.png" />
     <Content Include="Resource\eclip_32px.png" />
     <Content Include="Resource\galaxy_48px.png" />
+    <Content Include="Resource\hinhcaupng.png" />
+    <Content Include="Resource\hinhchop.png" />
     <Content Include="Resource\icons8_broom_64px_2.png" />
     <Content Include="Resource\icons8_line_26px.png" />
     <Content Include="Resource\icons8_play_button_circled_64px.png" />
     <Content Include="Resource\rectangular_32px.png" />
     <Content Include="Resource\round_50px.png" />
+    <Content Include="Resource\star_32px.png" />
     <Content Include="Resource\triangle_32px.png" />
   </ItemGroup>
   <ItemGroup />
