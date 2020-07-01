@@ -19,3 +19,4 @@ E:\C#\002\DoAnKTDH\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 E:\C#\002\DoAnKTDH\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 E:\C#\002\DoAnKTDH\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 D:\Code\C#\Code\KTDH\DoAn\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+E:\C#\002\DoAnKTDH\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources

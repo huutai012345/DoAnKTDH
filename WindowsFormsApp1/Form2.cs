@@ -44,5 +44,10 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void textBoxX_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

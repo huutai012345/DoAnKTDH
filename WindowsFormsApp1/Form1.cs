@@ -413,23 +413,111 @@ namespace WindowsFormsApp1
 
             }
         }
-
-        private void button10_Click(object sender, EventArgs e)
+        public void drawHeToaDo3d()
         {
-            Form2 form2 = new Form2();
-            form2.Show();
+            Graphics g = this.panel2.CreateGraphics();
+
+            for (int i = 0; i <= 320; i++)
+            {
+                g.DrawLine(new Pen(Color.Pink), 5 * i, 0, 5 * i, 1360);
+                g.DrawLine(new Pen(Color.Pink), 0, 5 * i, 1360, 5 * i);
+            }
+
+            g.DrawLine(new Pen(Color.Red), 680, 0, 680, 385);
+            g.DrawLine(new Pen(Color.Red), 680, 385, 1360, 385);
+            g.DrawLine(new Pen(Color.Red), 680, 385, 0, 1050);
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void Cylindrical_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
             form2.Show();
+            this.panel2.Refresh();
+            this.drawHeToaDo3d();
+            int x = form2.X;
+            int y = form2.Y;
+            int z = form2.Z;
+            int r = form2.Lenght;
+            int h = form2.Height;
+            //Cylindrical c = new Cylindrical(h, r, x, y, z);
+            //c.Draw(g);
+            //AX.Text = x + ""; AY.Text = y + ""; AZ.Text = z + "";
+            //BX.Text = x + ""; BY.Text = y + ""; BZ.Text = (z + h) + "";
+            //CX.Text = "-"; CY.Text = "-"; CZ.Text = "-";
+            //DX.Text = "-"; DY.Text = "-"; DZ.Text = "-";
+            //EX.Text = "-"; EY.Text = "-"; EZ.Text = "-";
+            //FX.Text = "-"; FY.Text = "-"; FZ.Text = "-";
+            //HX.Text = "-"; HY.Text = "-"; HZ.Text = "-";
+            //JX.Text = "-"; JY.Text = "-"; JZ.Text = "-";
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void Conical_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
             form2.Show();
+            this.panel2.Refresh();
+            this.drawHeToaDo3d();
+            int x = form2.X;
+            int y = form2.Y;
+            int z = form2.Z;
+            int r = form2.Lenght / 2;
+            int h = form2.Height;
+            //Conical c = new Conical(r, h, x, y, z, Color.Black);
+            //c.Draw(g);
+            //AX.Text = (x) + ""; AY.Text = (y) + ""; AZ.Text = (z + h) + "";
+            //BX.Text = "-"; BY.Text = "-"; BZ.Text = "-";
+            //CX.Text = "-"; CY.Text = "-"; CZ.Text = "-";
+            //DX.Text = "-"; DY.Text = "-"; DZ.Text = "-";
+            //EX.Text = "-"; EY.Text = "-"; EZ.Text = "-";
+            //FX.Text = "-"; FY.Text = "-"; FZ.Text = "-";
+            //HX.Text = "-"; HY.Text = "-"; HZ.Text = "-";
+            //JX.Text = "-"; JY.Text = "-"; JZ.Text = "-";
+        }
+
+        private void Pyramid_Click(object sender, EventArgs e)
+        {
+            //Form2 form2 = new Form2();
+            //form2.Show();
+            //this.panel2.Refresh();
+            //this.drawHeToaDo3d();
+            //int x = form2.X;
+            //int y = form2.Y;
+            //int z = form2.Z;
+            //int length = form2.Lenght;
+            //int height = form2.Height;
+            //Pyramid p = new Pyramid(height, length, x, y, z);
+            //p.Draw(g);
+            //length = length / 2;
+            //AX.Text = (x) + ""; AY.Text = (y) + ""; AZ.Text = (z + length) + "";
+            //BX.Text = (x + length) + ""; BY.Text = (y - length) + ""; BZ.Text = (z) + "";
+            //CX.Text = (x - length) + ""; CY.Text = (y - length) + ""; CZ.Text = (z) + "";
+            //DX.Text = (x - length) + ""; DY.Text = (y + length) + ""; DZ.Text = (z) + "";
+            //EX.Text = (x + length) + ""; EY.Text = (y + length) + ""; EZ.Text = (z) + "";
+            //FX.Text = "-"; FY.Text = "-"; FZ.Text = "-";
+            //HX.Text = "-"; HY.Text = "-"; HZ.Text = "-";
+            //JX.Text = "-"; JY.Text = "-"; JZ.Text = "-";
+        }
+
+        private void Box_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+            this.panel2.Refresh();
+            this.drawHeToaDo3d();
+            int x = form2.X;
+            int y = form2.Y;
+            int z = form2.Z;
+            int length = form2.Lenght;
+            //Box b = new Box(length, x, y, z, Color.Black);
+            //b.Draw(g);
+            //AX.Text = x + ""; AY.Text = y + ""; AZ.Text = z + "";
+            //BX.Text = x + ""; BY.Text = y + ""; BZ.Text = (z + length) + "";
+            //CX.Text = (x) + ""; CY.Text = (y + length) + ""; CZ.Text = (z) + "";
+            //DX.Text = (x) + ""; DY.Text = (y + length) + ""; DZ.Text = (z + length) + "";
+            //EX.Text = (x + length) + ""; EY.Text = (y) + ""; EZ.Text = (z) + "";
+            //FX.Text = (x + length) + ""; FY.Text = (y + length) + ""; FZ.Text = (z) + "";
+            //HX.Text = (x + length) + ""; HY.Text = (y) + ""; HZ.Text = (z + length) + "";
+            //JX.Text = (x + length) + ""; JY.Text = (y + length) + ""; JZ.Text = (z + length) + "";
         }
     }
 }

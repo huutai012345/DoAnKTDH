@@ -52,6 +52,7 @@
     <Compile Include="Class\Car3d.cs" />
     <Compile Include="Class\AirLane.cs" />
     <Compile Include="Class\Conical.cs" />
+    <Compile Include="Class\Cylindrical.cs" />
     <Compile Include="Class\Hinh1.cs" />
     <Compile Include="Class\HinhElip.cs" />
     <Compile Include="Class\HinhChuNhat.cs" />
