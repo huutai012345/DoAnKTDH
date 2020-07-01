@@ -10,7 +10,7 @@ namespace WindowsFormsApp1.Class
 {
     class Hinh1
     {
-        private bool checkNgay = false;
+        private bool checkNgay = true;
         private Graphics g;
         private Car2d c;
         private HinhChuNhat d;
@@ -87,7 +87,7 @@ namespace WindowsFormsApp1.Class
         {
             this.g = g;
             c = new Car2d(this.g);
-            sun = new Sun(new Point(130, 130),70);
+            sun = new Sun(new Point(280, 70),70);
             nenTroi = new HinhChuNhat(new Point(0, 0), new Point(1350, 600), Color.FromArgb(62, 155, 244));
 
             d = new HinhChuNhat(new Point(0, 600), new Point(toadoXMax, 800), Color.Black);
@@ -157,6 +157,13 @@ namespace WindowsFormsApp1.Class
             cloud8 = new HinhTron(28, new Point(430, 100), Color.Black);
         }
 
+        public void RandomStar()
+        {
+            Random r = new Random();
+            for(int i=0;i<100;i++)
+                Pixel.HienThi(new Point(r.Next(0, 1340), r.Next(0, 500)),g,Color.FromArgb(254, 235, 199));
+        }
+
         public void Reset()
         {
             if (vachkeDuong1.A.X >= toadoXMax)
@@ -181,9 +188,6 @@ namespace WindowsFormsApp1.Class
             {
                 vachkeDuong4.A = Transformations.TinhTien(vachkeDuong8.A, -toadoXMax, 0);
                 vachkeDuong4.B = Transformations.TinhTien(vachkeDuong8.B, -toadoXMax, 0);
-
-                
-              
             }
 
             if (vachkeDuong5.A.X >= toadoXMax)
@@ -208,21 +212,22 @@ namespace WindowsFormsApp1.Class
             {
                 vachkeDuong8.A = Transformations.TinhTien(vachkeDuong4.A, -toadoXMax, 0);
                 vachkeDuong8.B = Transformations.TinhTien(vachkeDuong4.B, -toadoXMax, 0);
-
-
-
-                if (checkNgay)
+                if (sun.hc.Point.X<=-280)
                 {
+                    sun = new Sun(new Point(280, 70), 70);
                     DrawNgay();
-                    checkNgay = false;
-                }
-                else
-                {
-                    DrawDem();
                     checkNgay = true;
                 }
 
             }
+
+
+            if (this.sun.hc.Point.X+this.sun.hc.Radius <0 && checkNgay)
+            {
+                DrawDem();
+                checkNgay = false;
+            }
+           
         }
 
         public void DrawNgay()
@@ -270,8 +275,8 @@ namespace WindowsFormsApp1.Class
 
             trafficlights1.FillColor(g, Color.Pink);
             trafficlights2.FillColor(g, Color.Pink);
-            lightbulbL.FillColor(g, Color.Yellow);
-            lightbulbR.FillColor(g, Color.Yellow);
+            lightbulbL.FillColor(g, Color.White);
+            lightbulbR.FillColor(g, Color.White);
 
             cloud1.FillColor(g, Color.LightPink);
             cloud2.FillColor(g, Color.LightPink);
@@ -329,8 +334,85 @@ namespace WindowsFormsApp1.Class
         public void DrawDem()
         {
             nenTroi.FillColor(g, Color.FromArgb(30, 46, 60));
+            RandomStar();
+
+            thanCay.FillColor(g, Color.DarkOliveGreen);
+            laCay.FillColor(g, Color.Green);
+            house1.FillColor(g, Color.Gray);
+            house2.FillColor(g, Color.Gray);
+            house3.FillColor(g, Color.Gray);
+
+            //windowns1.FillColor(g, Color.White);
+            windowns2.FillColor(g, Color.Yellow);
+            windowns3.FillColor(g, Color.Yellow);
+            windowns4.FillColor(g, Color.Yellow);
+            windowns5.FillColor(g, Color.Yellow);
+            windowns6.FillColor(g, Color.Yellow);
+            windowns7.FillColor(g, Color.Yellow);
+            windowns8.FillColor(g, Color.Yellow);
+
+            //windowns11.FillColor(g, Color.White);
+            windowns12.FillColor(g, Color.Yellow);
+            windowns13.FillColor(g, Color.Yellow);
+            windowns14.FillColor(g, Color.Yellow);
+            windowns15.FillColor(g, Color.Yellow);
+            windowns16.FillColor(g, Color.Yellow);
+            windowns17.FillColor(g, Color.Yellow);
+            windowns18.FillColor(g, Color.Yellow);
+
+            //windowns21.FillColor(g, Color.White);
+            windowns22.FillColor(g, Color.Yellow);
+            windowns23.FillColor(g, Color.Yellow);
+            windowns24.FillColor(g, Color.Yellow);
+            windowns25.FillColor(g, Color.Yellow);
+            windowns26.FillColor(g, Color.Yellow);
+
+            //windowns31.FillColor(g, Color.White);
+            windowns32.FillColor(g, Color.Yellow);
+            windowns33.FillColor(g, Color.Yellow);
+            windowns34.FillColor(g, Color.Yellow);
+
+
+            trafficlights1.FillColor(g, Color.Pink);
+            trafficlights2.FillColor(g, Color.Pink);
+            lightbulbL.FillColor(g, Color.Yellow);
+            lightbulbR.FillColor(g, Color.Yellow);
+
+            house1.Draw(g);
+            house2.Draw(g);
+            house3.Draw(g);
+
+            //windowns1.Draw(g);
+            windowns2.Draw(g);
+            windowns3.Draw(g);
+            windowns4.Draw(g);
+            windowns5.Draw(g);
+            windowns6.Draw(g);
+            windowns7.Draw(g);
+            windowns8.Draw(g);
+
+            //windowns11.Draw(g);
+            windowns12.Draw(g);
+            windowns13.Draw(g);
+            windowns14.Draw(g);
+            windowns15.Draw(g);
+            windowns16.Draw(g);
+            windowns17.Draw(g);
+            windowns18.Draw(g);
+
+            //windowns21.Draw(g);
+            windowns22.Draw(g);
+            windowns23.Draw(g);
+            windowns24.Draw(g);
+            windowns25.Draw(g);
+            windowns26.Draw(g);
+
+            //windowns31.Draw(g);
+            windowns32.Draw(g);
+            windowns33.Draw(g);
+            windowns34.Draw(g);
+
             d.FillColor(g, Color.FromArgb(127, 127, 127));
-            sun.Draw(g);
             vachkeDuong1.Draw(g);
             vachkeDuong2.Draw(g);
             vachkeDuong3.Draw(g);
@@ -350,7 +432,8 @@ namespace WindowsFormsApp1.Class
             vachkeDuong7.Draw(g);
             vachkeDuong8.Draw(g);
 
-            sun.Draw(g);
+            if (checkNgay)
+                sun.Draw(g);
         }
 
         public void Delete()
@@ -367,15 +450,11 @@ namespace WindowsFormsApp1.Class
                 Pixel.HienThi(new Point(this.vachkeDuong8.A.X - i, this.vachkeDuong8.A.Y), g, Color.FromArgb(127, 127, 127));
             }
 
-            if(this.checkNgay)
+            if(checkNgay)
             {
                 this.sun.DeleteNgay(g);
             }
-            else
-            {
-                this.sun.DeleteDem(g);
-            }
-          
+      
         }
 
         public void TinhTien()
@@ -398,7 +477,9 @@ namespace WindowsFormsApp1.Class
             vachkeDuong8.A = Transformations.TinhTien(vachkeDuong8.A, speed, 0);
             vachkeDuong8.B = Transformations.TinhTien(vachkeDuong8.B, speed, 0);
 
-            sun =new Sun(Transformations.TinhTien(this.sun.point,1,0),70);
+            //if(checkNgay)
+                sun =new Sun( Transformations.TinhTien(sun.hc.Point,-1,1),70);
+           
         }
 
         public void run()
@@ -409,7 +490,5 @@ namespace WindowsFormsApp1.Class
             this.Reset();
             c.run();
         }
-
-      
     }
 }

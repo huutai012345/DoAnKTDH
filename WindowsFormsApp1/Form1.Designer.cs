@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(204, 950);
             this.panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(141, 137);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(59, 51);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -129,6 +138,7 @@
             this.button16.Size = new System.Drawing.Size(60, 50);
             this.button16.TabIndex = 17;
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button15
             // 
@@ -172,6 +182,7 @@
             this.button12.Size = new System.Drawing.Size(60, 50);
             this.button12.TabIndex = 13;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // btnL
             // 
@@ -324,15 +335,6 @@
             // 
             this.timer4.Interval = 200;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(141, 137);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 51);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
