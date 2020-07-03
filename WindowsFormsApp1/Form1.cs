@@ -28,6 +28,7 @@ namespace WindowsFormsApp1
         private Universe hinh2;
         private Car3d hinh3;
         private AirLane hinh4;
+
         public Form1()
         {
             InitializeComponent();
@@ -48,6 +49,31 @@ namespace WindowsFormsApp1
           
         }
 
+        private void rsPoint()
+        {
+            this.AX.Text = "-";
+
+
+            this.BX.Text = "-";
+
+
+            this.CX.Text = "-";
+
+
+            this.DX.Text = "-";
+
+
+            this.EX.Text = "-";
+
+
+            this.FX.Text = "-";
+
+
+            this.HX.Text = "-";
+
+
+            this.JX.Text = "-";
+        }
         private void button1_Click(object sender, EventArgs e) // run
         {
 
@@ -108,8 +134,9 @@ namespace WindowsFormsApp1
                 g.DrawLine(new Pen(Color.Pink), 0, 5 * i, 1360, 5 * i);
             }
 
-            g.DrawLine(new Pen(Color.Red), 680, 0, 680, 385);
-            g.DrawLine(new Pen(Color.Red), 680, 385, 1360, 385);
+         
+            g.DrawLine(new Pen(Color.Red,4), 678, 0, 678, 385);
+            g.DrawLine(new Pen(Color.Red,4), 678, 383, 1360, 383);
          
         }
 
@@ -123,9 +150,9 @@ namespace WindowsFormsApp1
                 g.DrawLine(new Pen(Color.Pink), 0, 5 * i, 1360, 5 * i);
             }
 
-            g.DrawLine(new Pen(Color.Red), 680, 0, 680, 385);
-            g.DrawLine(new Pen(Color.Red), 680, 385, 1360, 385);
-            g.DrawLine(new Pen(Color.Red), 680, 385, 0, 1050);
+            g.DrawLine(new Pen(Color.Red, 4), 678, 0, 678, 385);
+            g.DrawLine(new Pen(Color.Red, 4), 678, 383, 1360, 383);
+            g.DrawLine(new Pen(Color.Red,4), 678, 383, 0, 1048);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -188,6 +215,7 @@ namespace WindowsFormsApp1
 
         private void button14_Click(object sender, EventArgs e)
         {
+            this.rsPoint();
             this.timer1.Stop();
             this.timer2.Stop();
             this.timer3.Stop();
@@ -201,6 +229,7 @@ namespace WindowsFormsApp1
 
         private void button15_Click(object sender, EventArgs e)
         {
+            this.rsPoint();
             this.timer1.Stop();
             this.timer2.Stop();
             this.timer3.Stop();
@@ -214,6 +243,7 @@ namespace WindowsFormsApp1
 
         private void button17_Click(object sender, EventArgs e)
         {
+            this.rsPoint();
             this.timer1.Stop();
             this.timer2.Stop();
             this.timer3.Stop();
@@ -227,6 +257,7 @@ namespace WindowsFormsApp1
 
         private void button13_Click(object sender, EventArgs e)
         {
+            this.rsPoint();
             this.timer1.Stop();
             this.timer2.Stop();
             this.timer3.Stop();
@@ -254,27 +285,68 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e) //hinh cn
         {
+            if (chedo != 1)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo2D();
+                this.chedo = 1;
+            }
             this.hinh = 1;
         }
 
         private void button8_Click(object sender, EventArgs e) // hinh eclip
         {
+            if (chedo != 1)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo2D();
+                this.chedo = 1;
+            }
             this.hinh = 2;
         }
 
         private void button7_Click(object sender, EventArgs e) //hinh tron
         {
+            if (chedo != 1)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo2D();
+                this.chedo = 1;
+            }
             this.hinh = 3;
         }
 
         private void button9_Click(object sender, EventArgs e) //hinh tam giac
         {
+            if (chedo != 1)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo2D();
+                this.chedo = 1;
+            }
             this.hinh = 4;
         }
 
         private void button11_Click(object sender, EventArgs e) //duong thang
         {
+            if (chedo != 1)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo2D();
+                this.chedo = 1;
+            }
             this.hinh = 5;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e) // ngoi sao
+        {
+            if (chedo != 1)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo2D();
+                this.chedo = 1;
+            }
+            this.hinh = 6;
         }
 
         private void panel2_MouseClick(object sender, MouseEventArgs e)
@@ -283,6 +355,7 @@ namespace WindowsFormsApp1
             int y = e.Y;
             if (chedo == 1)
             {
+                this.rsPoint();
                 if (hinh == 1) //hcn
                 {
                     if(p1.X==-1)
@@ -295,9 +368,20 @@ namespace WindowsFormsApp1
                     {
                         p2.X = Pixel.RoundPixel(x);
                         p2.Y = Pixel.RoundPixel(y);
-                       
 
+                       
                         HinhChuNhat hcn = new HinhChuNhat(p1, p2, this.color);
+
+                        //this.AX.Text = "( " + hcn.A.X/5 + " , " + hcn.A.Y/5 + " )";
+                        //this.BX.Text = "( " + hcn.B.X/5 + " , " + hcn.B.Y/5 + " )";
+                        //this.CX.Text = "( " + hcn.C.X/5 + " , " + hcn.C.Y/5 + " )";
+                        //this.DX.Text = "( " + hcn.D.X/5 + " , " + hcn.D.Y/5 + " )";
+
+                        this.AX.Text = Pixel.chuyenToaDoNgDg(hcn.A);
+                        this.BX.Text = Pixel.chuyenToaDoNgDg(hcn.B);
+                        this.CX.Text = Pixel.chuyenToaDoNgDg(hcn.C);
+                        this.DX.Text = Pixel.chuyenToaDoNgDg(hcn.D);
+
                         hcn.Draw(g);
                         p1.X = -1;
                         p2.X = -1;
@@ -324,10 +408,17 @@ namespace WindowsFormsApp1
                         p3.X = p1.X;
                         p3.Y = Pixel.RoundPixel(y);
 
+                        this.AX.Text = Pixel.chuyenToaDoNgDg(p1);
+                        this.BX.Text = Pixel.chuyenToaDoNgDg(p2);
+                        this.CX.Text = Pixel.chuyenToaDoNgDg(p3);
 
+                        Pixel.HienThi(p1, g, color);
                         int a = Pixel.distancePoint(p1, p2);
                         int b = Pixel.distancePoint(p1, p3);
-                        HinhElip el = new HinhElip(p1, a, b, this.color);
+                        Elip el = new Elip(p1, a, b, this.color);
+                      
+
+
                         el.Draw(g);
                        
                         
@@ -350,7 +441,10 @@ namespace WindowsFormsApp1
                         p2.X = Pixel.RoundPixel(x);
                         p2.Y = Pixel.RoundPixel(y);
 
+                        this.AX.Text = Pixel.chuyenToaDoNgDg(p1);
+                        this.BX.Text = Pixel.chuyenToaDoNgDg(p2);
 
+                        Pixel.HienThi(p1, g, color);
                         HinhTron ht = new HinhTron(Pixel.distancePoint(p1,p2), p1, this.color);
                         ht.Draw(g);
                         p1.X = -1;
@@ -378,6 +472,9 @@ namespace WindowsFormsApp1
                         p3.X = Pixel.RoundPixel(x);
                         p3.Y = Pixel.RoundPixel(y);
 
+                        this.AX.Text = Pixel.chuyenToaDoNgDg(p1);
+                        this.BX.Text = Pixel.chuyenToaDoNgDg(p2);
+                        this.BX.Text = Pixel.chuyenToaDoNgDg(p3);
                         HinhTamGiac htg = new HinhTamGiac(p1, p2, p3, color);
                         htg.Draw(g);
 
@@ -400,6 +497,8 @@ namespace WindowsFormsApp1
                         p2.X = Pixel.RoundPixel(x);
                         p2.Y = Pixel.RoundPixel(y);
 
+                        this.AX.Text = Pixel.chuyenToaDoNgDg(p1);
+                        this.BX.Text = Pixel.chuyenToaDoNgDg(p2);
                         Line l = new Line(p1, p2, color);
                         l.Draw(g);
                         p1.X = -1;
@@ -407,42 +506,100 @@ namespace WindowsFormsApp1
                        
                     }
                 }
+                else if(hinh==6)
+                {
+                    if (p1.X == -1)
+                    {
+                        p1.X = Pixel.RoundPixel(x);
+                        p1.Y = Pixel.RoundPixel(y);
+                        Pixel.HienThi(p1, g, color);
+                    }
+                    else if (p2.X == -1)
+                    {
+                        p2.X = p1.X;
+                        p2.Y = Pixel.RoundPixel(y);
+
+                        this.AX.Text = Pixel.chuyenToaDoNgDg(p1);
+                        this.BX.Text = Pixel.chuyenToaDoNgDg(p2);
+
+                        Pixel.HienThi(p1, g, Color.White);
+                        Star star = new Star(p1, Math.Abs(p1.Y-p2.Y) , color);
+                        star.Draw(g);
+
+                        p1.X = -1;
+                        p2.X = -1;
+
+                    }
+                   
+                }
             }
             else if(chedo==2)
             {
-
+                
             }
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(g, 1);
+
+            if (chedo != 2)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo3D();
+                this.chedo = 2;
+            }
+            Form2 form2 = new Form2(g, 1, this);
             form2.Show();
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(g,2);
+            if(chedo!=2)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo3D();
+                this.chedo = 2;
+            }
+            Form2 form2 = new Form2(g,2, this);
             form2.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(g, 3);
+            if (chedo != 2)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo3D();
+                this.chedo = 2;
+            }
+            Form2 form2 = new Form2(g, 3, this);
             form2.Show();
         }
 
 
         private void buttonHinhChop_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(g,4);
+            if (chedo != 2)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo3D();
+                this.chedo = 2;
+            }
+            Form2 form2 = new Form2(g,4, this);
             form2.Show();
         }
 
         private void buttonHinhCau_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(g,5);
+            if (chedo != 2)
+            {
+                this.panel2.Refresh();
+                drawHeToaDo3D();
+                this.chedo = 2;
+            }
+            Form2 form2 = new Form2(g,5, this);
             form2.Show();
+
         }
     }
 }

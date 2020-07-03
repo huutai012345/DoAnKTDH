@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
+
+        private Form1 form1;
         private int x;
         private int y;
         private int z;
@@ -34,37 +36,143 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        public Form2(Graphics g, int chedo,Form1 form1)
+        {
+            this.g = g;
+            this.chedo = chedo;
+            this.form1 = form1;
+            InitializeComponent();
+        }
+
+        public void DrawToaTo()
+        {
+            
+        }
+
         public void Draw()
         {
             if(chedo == 1) // hinh tru
             {
                 
-                Cylindrical c = new Cylindrical(Height1, Length, X, Y, Z);
+                Cylindrical c = new Cylindrical(Height1 * 5, Length * 5, X * 5, Y * 5, Z * 5);
                 c.Draw(g);
 
-                //AX.Text = x + ""; AY.Text = y + ""; AZ.Text = z + "";
-                //BX.Text = x + ""; BY.Text = y + ""; BZ.Text = (z + h) + "";
-                //CX.Text = "-"; CY.Text = "-"; CZ.Text = "-";
-                //DX.Text = "-"; DY.Text = "-"; DZ.Text = "-";
-                //EX.Text = "-"; EY.Text = "-"; EZ.Text = "-";
-                //FX.Text = "-"; FY.Text = "-"; FZ.Text = "-";
-                //HX.Text = "-"; HY.Text = "-"; HZ.Text = "-";
-                //JX.Text = "-"; JY.Text = "-"; JZ.Text = "-";
+                this.form1.AX1.Text = "( "+x + " , " + y +" , "+ z+" )";
+               
+
+                this.form1.BX1.Text = "( " + x + " , " + y + " , " + (z + Height1) + " )";
+              
+
+                this.form1.CX1.Text = "-";
+               
+
+                this.form1.DX1.Text = "-";
+               
+
+                this.form1.EX1.Text = "-";
+               
+
+                this.form1.FX1.Text = "-";
+               
+
+                this.form1.HX1.Text = "-";
+               
+
+                this.form1.JX1.Text = "-";
+                
             }
             else if(chedo == 2)//hinh non
             {
-                Conical c = new Conical(Length, Height1, x, y, z, Color.Black);
+                Conical c = new Conical(Length*5, Height1 * 5, x * 5, y * 5, z * 5, Color.Black);
                 c.Draw(g);
+
+                this.form1.AX1.Text = "( " + x + " , " + y + " , " + (z + Height1) + " )";
+                
+
+                this.form1.BX1.Text = "-";
+               
+
+                this.form1.CX1.Text = "-";
+                
+
+                this.form1.DX1.Text = "-";
+               
+
+                this.form1.EX1.Text = "-";
+                
+
+                this.form1.FX1.Text = "-";
+               
+
+                this.form1.HX1.Text = "-";
+                
+
+                this.form1.JX1.Text = "-";
+                
             }
             else if(chedo==3)//box
             {
-                Box b = new Box(Length, X, Y, Z, Color.Black);
+                Box b = new Box(Length * 5, X * 5, Y * 5, Z * 5, Color.Black);
                 b.Draw(g);
+
+                this.form1.AX1.Text = "( " + x + " , " + y + " , " + z + " )";
+
+                this.form1.BX1.Text = "( " + x + " , " + y + " , " + (z + Length) + " )";
+
+                this.form1.CX1.Text = "( " + x + " , " + (y + Length) + " , " + z + " )";
+
+                this.form1.DX1.Text = "( " + x + " , " + (y + Length) + " , " + (z + Length) + " )";
+
+                this.form1.EX1.Text = "( " + (x + Length) + " , " + y  + " , " + z + " )";
+
+                this.form1.FX1.Text = "( " + (x + Length) + " , " + (y + Length) + " , " + z + " )";
+
+                this.form1.HX1.Text = "( " + (x + Length) + " , " + y + " , " + (z + Length) + " )";
+
+                this.form1.JX1.Text = "( " + (x + Length) + " , " + (y + Length) + " , " + (z + Length) + " )";
+          
             }
             else if(chedo==4)
             {
-                Pyramid p = new Pyramid(Height1, Length, x, y, z);
+                Pyramid p = new Pyramid(Height1 * 5, Length * 5, x * 5, y * 5, z * 5);
                 p.Draw(g);
+
+                this.form1.AX1.Text = "( " + x + " , " + y + " , " + (z + Length) + " )";
+
+                this.form1.BX1.Text = "( "+ (x + Length) +" , "+ (y - Length) + " , "+ (z) + " )";
+              
+                this.form1.CX1.Text = "( " + (x - Length) +" , "+ (y - Length) + " , "+ (z) + " )";
+              
+                this.form1.DX1.Text = "( " + (x - Length) + " , "+ (y + Length) + " , "+ (z) + " )";
+               
+                this.form1.EX1.Text = "( " + (x + Length) + " , "+ (y + Length) + " , "+ (z) + " )";
+             
+                this.form1.FX1.Text = "-";
+              
+                this.form1.HX1.Text = "-";
+              
+                this.form1.JX1.Text = "-";
+            }
+            else if (chedo == 5)
+            {
+                Globe p = new Globe(Length * 5, x * 5, y * 5, z * 5);
+                p.Draw(g);
+
+                this.form1.AX1.Text = "( " + x + " , " + y + " , " + z + " )";
+
+                this.form1.BX1.Text = "-";
+
+                this.form1.CX1.Text = "-";
+
+                this.form1.DX1.Text = "-";
+
+                this.form1.EX1.Text = "-";
+
+                this.form1.FX1.Text = "-";
+
+                this.form1.HX1.Text = "-";
+
+                this.form1.JX1.Text = "-";
             }
         }
 

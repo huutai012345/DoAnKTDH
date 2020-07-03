@@ -10,7 +10,7 @@ namespace WindowsFormsApp1.Class
     class Sun
     {
         private HinhTron hinhTron;
-        private HinhElip mieng;
+        private Elip mieng;
         private HinhTron mat1;
         private HinhTron mat2;
 
@@ -19,7 +19,7 @@ namespace WindowsFormsApp1.Class
         public Sun(Point p1,int radius)
         {
             hinhTron = new HinhTron(radius, p1, Color.Black);
-            mieng = new HinhElip(new Point(this.hinhTron.Point.X,this.hinhTron.Point.Y+30), 25, 10, Color.Black);
+            mieng = new Elip(new Point(this.hinhTron.Point.X,this.hinhTron.Point.Y+30), 25, 10, Color.Black);
             mat1 = new HinhTron(10,new Point(p1.X-40, p1.Y-15), Color.Black);
             mat2 = new HinhTron(10,new Point(p1.X+40, p1.Y - 15), Color.Black);
         }

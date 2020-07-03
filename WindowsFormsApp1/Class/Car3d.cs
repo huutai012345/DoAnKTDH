@@ -21,16 +21,16 @@ namespace WindowsFormsApp1.Class
         private Line truc5;
         private Line truc6;
 
-        private HinhElip banhTrc = new HinhElip();
-        private HinhElip banhSau = new HinhElip();
+        private Elip banhTrc = new Elip();
+        private Elip banhSau = new Elip();
 
         public Car3d()
         {
             A = new Point(-1, -1);
             B = new Point(-1, -1);
             C = new Point(-1, -1);
-            banhTrc = new HinhElip();
-            banhSau = new HinhElip();
+            banhTrc = new Elip();
+            banhSau = new Elip();
             truc1 = new Line();
             truc2 = new Line();
             truc3 = new Line();
@@ -196,11 +196,11 @@ namespace WindowsFormsApp1.Class
             A.X = 730 - temp;
             A.Y = 610;
 
-            banhTrc = new HinhElip(A, 60, 70, Color.Black);
+            banhTrc = new Elip(A, 60, 70, Color.Black);
             banhTrc.Draw(g);
             banhTrc.FillColor(g, Color.Black);
            
-            banhTrc = new HinhElip(A, 40, 50, Color.Black);
+            banhTrc = new Elip(A, 40, 50, Color.Black);
             banhTrc.Draw(g);
             banhTrc.FillColor(g, Color.White);
 
@@ -227,11 +227,11 @@ namespace WindowsFormsApp1.Class
             A.Y = 420; 
           
 
-            banhSau = new HinhElip(A, 60, 70, Color.Black);
+            banhSau = new Elip(A, 60, 70, Color.Black);
             banhSau.Draw(g);
             banhSau.FillColor(g, Color.Black);
 
-            banhSau = new HinhElip(A, 40, 50, Color.Black);
+            banhSau = new Elip(A, 40, 50, Color.Black);
             banhSau.Draw(g);
             banhSau.FillColor(g, Color.White);
 

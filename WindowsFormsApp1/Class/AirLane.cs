@@ -79,11 +79,11 @@ namespace WindowsFormsApp1.Class
         public void Cloud(Graphics g)
         {
             int a = -1, b = -1;
-            HinhElip e = new HinhElip(A, a, b, Color.Black);
+            Elip e = new Elip(A, a, b, Color.Black);
 
-            A = new Point(100, 100); a = 200; b = 100; e = new HinhElip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
-            A = new Point(500, 200); a = 100; b = 50; e = new HinhElip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
-            A = new Point(1000, 700); a = 150; b = 75; e = new HinhElip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
+            A = new Point(100, 100); a = 200; b = 100; e = new Elip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
+            A = new Point(500, 200); a = 100; b = 50; e = new Elip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
+            A = new Point(1000, 700); a = 150; b = 75; e = new Elip(A, a, b, Color.Black); e.Draw(g); e.FillColor(g, Color.Aqua);
         }
 
         public void Sun(Graphics g)

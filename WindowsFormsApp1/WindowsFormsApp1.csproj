@@ -53,14 +53,16 @@
     <Compile Include="Class\AirLane.cs" />
     <Compile Include="Class\Conical.cs" />
     <Compile Include="Class\Cylindrical.cs" />
+    <Compile Include="Class\Globe.cs" />
     <Compile Include="Class\Hinh1.cs" />
-    <Compile Include="Class\HinhElip.cs" />
+    <Compile Include="Class\Elip.cs" />
     <Compile Include="Class\HinhChuNhat.cs" />
     <Compile Include="Class\HinhTamGiac.cs" />
     <Compile Include="Class\HinhThangCan.cs" />
     <Compile Include="Class\HinhTron.cs" />
     <Compile Include="Class\Line.cs" />
     <Compile Include="Class\Pyramid.cs" />
+    <Compile Include="Class\Star.cs" />
     <Compile Include="Class\Sun.cs" />
     <Compile Include="Class\Pixel.cs" />
     <Compile Include="Class\Transformations.cs" />

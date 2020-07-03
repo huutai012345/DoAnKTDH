@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿using System.Windows.Forms;
+
+namespace WindowsFormsApp1
 {
     partial class Form1
     {
@@ -31,6 +33,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.JX = new System.Windows.Forms.Label();
+            this.HX = new System.Windows.Forms.Label();
+            this.FX = new System.Windows.Forms.Label();
+            this.EX = new System.Windows.Forms.Label();
+            this.DX = new System.Windows.Forms.Label();
+            this.CX = new System.Windows.Forms.Label();
+            this.BX = new System.Windows.Forms.Label();
+            this.AX = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.A = new System.Windows.Forms.Label();
             this.buttonHinhChop = new System.Windows.Forms.Button();
             this.buttonHinhCau = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -59,12 +77,30 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.JX);
+            this.panel1.Controls.Add(this.HX);
+            this.panel1.Controls.Add(this.FX);
+            this.panel1.Controls.Add(this.EX);
+            this.panel1.Controls.Add(this.DX);
+            this.panel1.Controls.Add(this.CX);
+            this.panel1.Controls.Add(this.BX);
+            this.panel1.Controls.Add(this.AX);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.A);
             this.panel1.Controls.Add(this.buttonHinhChop);
             this.panel1.Controls.Add(this.buttonHinhCau);
             this.panel1.Controls.Add(this.button2);
@@ -92,6 +128,150 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(204, 950);
             this.panel1.TabIndex = 0;
+            // 
+            // JX
+            // 
+            this.JX.AutoSize = true;
+            this.JX.Location = new System.Drawing.Point(31, 582);
+            this.JX.Name = "JX";
+            this.JX.Size = new System.Drawing.Size(16, 17);
+            this.JX.TabIndex = 53;
+            this.JX.Text = "0";
+            // 
+            // HX
+            // 
+            this.HX.AutoSize = true;
+            this.HX.Location = new System.Drawing.Point(31, 553);
+            this.HX.Name = "HX";
+            this.HX.Size = new System.Drawing.Size(16, 17);
+            this.HX.TabIndex = 50;
+            this.HX.Text = "0";
+            // 
+            // FX
+            // 
+            this.FX.AutoSize = true;
+            this.FX.Location = new System.Drawing.Point(31, 521);
+            this.FX.Name = "FX";
+            this.FX.Size = new System.Drawing.Size(16, 17);
+            this.FX.TabIndex = 47;
+            this.FX.Text = "0";
+            // 
+            // EX
+            // 
+            this.EX.AutoSize = true;
+            this.EX.Location = new System.Drawing.Point(31, 490);
+            this.EX.Name = "EX";
+            this.EX.Size = new System.Drawing.Size(16, 17);
+            this.EX.TabIndex = 44;
+            this.EX.Text = "0";
+            // 
+            // DX
+            // 
+            this.DX.AutoSize = true;
+            this.DX.Location = new System.Drawing.Point(31, 457);
+            this.DX.Name = "DX";
+            this.DX.Size = new System.Drawing.Size(16, 17);
+            this.DX.TabIndex = 41;
+            this.DX.Text = "0";
+            // 
+            // CX
+            // 
+            this.CX.AutoSize = true;
+            this.CX.Location = new System.Drawing.Point(31, 425);
+            this.CX.Name = "CX";
+            this.CX.Size = new System.Drawing.Size(16, 17);
+            this.CX.TabIndex = 38;
+            this.CX.Text = "0";
+            // 
+            // BX
+            // 
+            this.BX.AutoSize = true;
+            this.BX.Location = new System.Drawing.Point(31, 393);
+            this.BX.Name = "BX";
+            this.BX.Size = new System.Drawing.Size(16, 17);
+            this.BX.TabIndex = 35;
+            this.BX.Text = "0";
+            // 
+            // AX
+            // 
+            this.AX.AutoSize = true;
+            this.AX.Location = new System.Drawing.Point(30, 360);
+            this.AX.Name = "AX";
+            this.AX.Size = new System.Drawing.Size(16, 17);
+            this.AX.TabIndex = 32;
+            this.AX.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(7, 582);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(15, 17);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "J";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 553);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(22, 17);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "H:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 521);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(20, 17);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "F:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 490);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 17);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "E:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 457);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(22, 17);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "D:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 425);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(21, 17);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "C:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 393);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 17);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "B:";
+            // 
+            // A
+            // 
+            this.A.AutoSize = true;
+            this.A.Location = new System.Drawing.Point(7, 360);
+            this.A.Name = "A";
+            this.A.Size = new System.Drawing.Size(21, 17);
+            this.A.TabIndex = 24;
+            this.A.Text = "A:";
             // 
             // buttonHinhChop
             // 
@@ -123,11 +303,12 @@
             this.button2.Size = new System.Drawing.Size(59, 51);
             this.button2.TabIndex = 21;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 201);
+            this.label3.Location = new System.Drawing.Point(20, 201);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 17);
@@ -362,6 +543,15 @@
             this.timer4.Interval = 200;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 343);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 17);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "POINT";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -412,6 +602,55 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonHinhChop;
         private System.Windows.Forms.Button buttonHinhCau;
+        private System.Windows.Forms.Label JZ;
+        private System.Windows.Forms.Label JY;
+        private System.Windows.Forms.Label JX;
+        private System.Windows.Forms.Label HZ;
+        private System.Windows.Forms.Label HY;
+        private System.Windows.Forms.Label HX;
+        private System.Windows.Forms.Label FZ;
+        private System.Windows.Forms.Label FY;
+        private System.Windows.Forms.Label FX;
+        private System.Windows.Forms.Label EZ;
+        private System.Windows.Forms.Label EY;
+        private System.Windows.Forms.Label EX;
+        private System.Windows.Forms.Label DZ;
+        private System.Windows.Forms.Label DY;
+        private System.Windows.Forms.Label DX;
+        private System.Windows.Forms.Label CZ;
+        private System.Windows.Forms.Label CY;
+        private System.Windows.Forms.Label CX;
+        private System.Windows.Forms.Label BZ;
+        private System.Windows.Forms.Label BY;
+        private System.Windows.Forms.Label BX;
+        private System.Windows.Forms.Label AZ;
+        private System.Windows.Forms.Label AY;
+        private System.Windows.Forms.Label AX;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label A;
+        private Label label4;
+
+        public Label JX1 { get => JX; set => JX = value; }
+       
+        public Label HX1 { get => HX; set => HX = value; }
+     
+        public Label FX1 { get => FX; set => FX = value; }
+       
+        public Label EX1 { get => EX; set => EX = value; }
+      
+        public Label DX1 { get => DX; set => DX = value; }
+      
+        public Label CX1 { get => CX; set => CX = value; }
+   
+        public Label BX1 { get => BX; set => BX = value; }
+       
+        public Label AX1 { get => AX; set => AX = value; }
     }
 }
 

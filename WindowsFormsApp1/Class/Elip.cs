@@ -7,42 +7,63 @@ using System.Drawing;
 
 namespace WindowsFormsApp1.Class
 {
-    class HinhElip
+    class Elip
     {
-        private Point point { get; set; }
-        private int a { get; set; }
-        private int b { get; set; }
+        private Point point;
+        private int a;
+        private int b;
+        private Color color;
 
-        private Color color { get; set; }
+        public Point Point { get => point; set => point = value; }
+        public int A { get => a; set => a = value; }
+        public int B { get => b; set => b = value; }
+        public Color Color { get => color; set => color = value; }
+
         public void Drawn4Point(int x, int y, Graphics g)
         {
-            Pixel.HienThi(new Point(point.X + x, point.Y + y), g, color);
-            Pixel.HienThi(new Point(point.X - x, point.Y + y), g, color);
-            Pixel.HienThi(new Point(point.X - x, point.Y - y), g, color);
-            Pixel.HienThi(new Point(point.X + x, point.Y - y), g, color);
+            Pixel.HienThi(new Point(Point.X + x, Point.Y + y), g, Color);
+            Pixel.HienThi(new Point(Point.X - x, Point.Y + y), g, Color);
+            Pixel.HienThi(new Point(Point.X - x, Point.Y - y), g, Color);
+            Pixel.HienThi(new Point(Point.X + x, Point.Y - y), g, Color);
         }
-        public void Drawn4Point_3D(int x, int y, Graphics g)
+        public void Drawn4Point_3D(int x, int y, Graphics g,int k=-1)
         {
-            if (x % 10 != 0)
+            if(k==-1)
             {
-                Pixel.HienThi(new Point(point.X - x, point.Y - y), g, color);
-                Pixel.HienThi(new Point(point.X + x, point.Y - y), g, color);
-            }
+               // if (x % 5 != 0)
+                {
+                    Pixel.HienThi(new Point(Point.X - x, Point.Y - y), g, Color);
+                    Pixel.HienThi(new Point(Point.X + x, Point.Y - y), g, Color);
+                }
 
-            Pixel.HienThi(new Point(point.X + x, point.Y + y), g, color);
-            Pixel.HienThi(new Point(point.X - x, point.Y + y), g, color);
+                Pixel.HienThi(new Point(Point.X + x, Point.Y + y), g, Color);
+                Pixel.HienThi(new Point(Point.X - x, Point.Y + y), g, Color);
+            }
+            else
+            {
+                if (0 >= k && k <= 5)
+                {
+                    Pixel.HienThi(new Point(Point.X - x, Point.Y - y), g, Color);
+                    Pixel.HienThi(new Point(Point.X + x, Point.Y - y), g, Color);
+                }
+              
+
+                Pixel.HienThi(new Point(Point.X + x, Point.Y + y), g, Color);
+                Pixel.HienThi(new Point(Point.X - x, Point.Y + y), g, Color);
+            }
+           
         }
         public void Draw(Graphics g)
         {
             int x, y ;
           
-            x = 0; y = b;
+            x = 0; y = this.B;
             int A, B;
-            A = a * a;
-            B = b * b;
-            double p = B + A / 4 - A * b;
+            A = this.A * this.A;
+            B = this.B * this.B;
+            double p = B + A / 4 - A * this.B;
             x = 0;
-            y = b;
+            y = this.B;
             int Dx = 0;
             int Dy = 2 * A * y;
             Drawn4Point(x, y,g);
@@ -60,7 +81,7 @@ namespace WindowsFormsApp1.Class
                     p += B + Dx - Dy;
                 }
                
-                if (x % 5 == 0)
+               // if (x % 5 == 0)
                     Drawn4Point(x, y, g);
 
 
@@ -79,7 +100,7 @@ namespace WindowsFormsApp1.Class
                     p += A - Dy + Dx;
                 }
                
-                if (x % 5 == 0)
+               // if (x % 5 == 0)
                     Drawn4Point(x, y, g);
 
             }
@@ -87,15 +108,16 @@ namespace WindowsFormsApp1.Class
 
         public void FillColor(Graphics g, Color color)
         {
-            g.FillEllipse(new SolidBrush(color), point.X - a-5, point.Y - b-5, 2 * a+5, 2 * b+5);
+            g.FillEllipse(new SolidBrush(color), Point.X - A-5, Point.Y - B-5, 2 * A+5, 2 * B+5);
         }
         public void Draw3d(Graphics g)
         {
+            int k = 0;
             int x, y, cx, cy, a, b;
-            cx = this.point.X;
-            cy = this.point.Y;
-            a = this.a;
-            b = this.b;
+            cx = this.Point.X;
+            cy = this.Point.Y;
+            a = this.A;
+            b = this.B;
             x = 0;
             y = b;
             int A, B;
@@ -120,8 +142,15 @@ namespace WindowsFormsApp1.Class
                     Dy -= 2 * A;
                     p += B + Dx - Dy;
                 }
-                if (x % 5 == 0)
-                    Drawn4Point_3D(x,y, g);
+                //if (x % 5 == 0)
+             
+                Drawn4Point_3D(x,y, g,k);
+                if (k == 10)
+                {
+                    k = 0;
+                }
+                else
+                    k++;
 
 
             }
@@ -138,20 +167,20 @@ namespace WindowsFormsApp1.Class
                     Dx += B * 2;
                     p += A - Dy + Dx;
                 }
-                if (x % 5 == 0)
+               //if (x % 5 == 0)
                     Drawn4Point_3D(x, y, g);
 
             }
         }
-        public HinhElip(Point point, int a, int b, Color color)
+        public Elip(Point point, int a, int b, Color color)
         {
-            this.point = point;
-            this.a = a ;
-            this.b = b ;
-            this.color = color;
+            this.Point = point;
+            this.A = a ;
+            this.B = b ;
+            this.Color = color;
         }
 
-        public HinhElip()
+        public Elip()
         {
             
         }
