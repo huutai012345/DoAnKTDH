@@ -61,6 +61,7 @@
     <Compile Include="Class\HinhThangCan.cs" />
     <Compile Include="Class\HinhTron.cs" />
     <Compile Include="Class\Line.cs" />
+    <Compile Include="Class\Moon.cs" />
     <Compile Include="Class\Pyramid.cs" />
     <Compile Include="Class\Star.cs" />
     <Compile Include="Class\Sun.cs" />

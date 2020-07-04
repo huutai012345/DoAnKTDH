@@ -35,14 +35,14 @@ namespace WindowsFormsApp1.Class
 
         public void DeleteNgay(Graphics g)
         {
-            HinhTron ht1 = new HinhTron(this.hinhTron.Radius, Transformations.TinhTien(this.hinhTron.Point,1,-1), Color.FromArgb(62, 155, 244));
+            HinhTron ht1 = new HinhTron(this.hinhTron.Radius, Transformations.TinhTien(this.hinhTron.Point,3,-3), Color.FromArgb(62, 155, 244));
             ht1.Draw(g);
             
         }
 
         public void DeleteDem(Graphics g)
         {
-            HinhTron ht1 = new HinhTron(this.hinhTron.Radius, Transformations.TinhTien(this.hinhTron.Point, 1, -1), Color.FromArgb(30, 46, 60));
+            HinhTron ht1 = new HinhTron(this.hinhTron.Radius, Transformations.TinhTien(this.hinhTron.Point, 3, -3), Color.FromArgb(30, 46, 60));
             ht1.Draw(g);
 
 

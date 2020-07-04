@@ -184,6 +184,7 @@ namespace WindowsFormsApp1
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
+            this.rsPoint();
             this.panel2.Refresh();
             if(play==0)
             {
@@ -191,7 +192,7 @@ namespace WindowsFormsApp1
                 {
                     drawHeToaDo2D();
                 }
-                else
+                else if(chedo==2)
                 {
                     drawHeToaDo3D();
                 }

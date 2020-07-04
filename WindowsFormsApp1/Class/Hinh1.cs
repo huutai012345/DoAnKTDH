@@ -25,6 +25,7 @@ namespace WindowsFormsApp1.Class
         private Line vachkeDuong8;
 
         private Sun sun;
+        private Moon moon;
         private HinhChuNhat nenTroi;
 
         //nha cao nhat
@@ -88,6 +89,7 @@ namespace WindowsFormsApp1.Class
             this.g = g;
             c = new Car2d(this.g);
             sun = new Sun(new Point(280, 70),70);
+            moon = new Moon(new Point(250, 70), 50);
             nenTroi = new HinhChuNhat(new Point(0, 0), new Point(1350, 600), Color.FromArgb(62, 155, 244));
 
             d = new HinhChuNhat(new Point(0, 600), new Point(toadoXMax, 800), Color.Black);
@@ -212,9 +214,9 @@ namespace WindowsFormsApp1.Class
             {
                 vachkeDuong8.A = Transformations.TinhTien(vachkeDuong4.A, -toadoXMax, 0);
                 vachkeDuong8.B = Transformations.TinhTien(vachkeDuong4.B, -toadoXMax, 0);
-                if (sun.hc.Point.X<=-280)
+                if (sun.hc.Point.X<=-200)
                 {
-                    sun = new Sun(new Point(280, 70), 70);
+                    sun = new Sun(new Point(280, 20), 70);
                     DrawNgay();
                     checkNgay = true;
                 }
@@ -335,6 +337,7 @@ namespace WindowsFormsApp1.Class
         {
             nenTroi.FillColor(g, Color.FromArgb(30, 46, 60));
             RandomStar();
+            moon.Draw(g);
 
             thanCay.FillColor(g, Color.DarkOliveGreen);
             laCay.FillColor(g, Color.Green);
@@ -478,7 +481,7 @@ namespace WindowsFormsApp1.Class
             vachkeDuong8.B = Transformations.TinhTien(vachkeDuong8.B, speed, 0);
 
             //if(checkNgay)
-                sun =new Sun( Transformations.TinhTien(sun.hc.Point,-1,1),70);
+                sun =new Sun( Transformations.TinhTien(sun.hc.Point,-3,3),70);
            
         }
 

@@ -136,7 +136,7 @@ namespace WindowsFormsApp1
             this.JX.Name = "JX";
             this.JX.Size = new System.Drawing.Size(16, 17);
             this.JX.TabIndex = 53;
-            this.JX.Text = "0";
+            this.JX.Text = "-";
             // 
             // HX
             // 
@@ -145,7 +145,7 @@ namespace WindowsFormsApp1
             this.HX.Name = "HX";
             this.HX.Size = new System.Drawing.Size(16, 17);
             this.HX.TabIndex = 50;
-            this.HX.Text = "0";
+            this.HX.Text = "-";
             // 
             // FX
             // 
@@ -154,7 +154,7 @@ namespace WindowsFormsApp1
             this.FX.Name = "FX";
             this.FX.Size = new System.Drawing.Size(16, 17);
             this.FX.TabIndex = 47;
-            this.FX.Text = "0";
+            this.FX.Text = "-";
             // 
             // EX
             // 
@@ -163,7 +163,7 @@ namespace WindowsFormsApp1
             this.EX.Name = "EX";
             this.EX.Size = new System.Drawing.Size(16, 17);
             this.EX.TabIndex = 44;
-            this.EX.Text = "0";
+            this.EX.Text = "-";
             // 
             // DX
             // 
@@ -172,7 +172,7 @@ namespace WindowsFormsApp1
             this.DX.Name = "DX";
             this.DX.Size = new System.Drawing.Size(16, 17);
             this.DX.TabIndex = 41;
-            this.DX.Text = "0";
+            this.DX.Text = "-";
             // 
             // CX
             // 
@@ -181,7 +181,7 @@ namespace WindowsFormsApp1
             this.CX.Name = "CX";
             this.CX.Size = new System.Drawing.Size(16, 17);
             this.CX.TabIndex = 38;
-            this.CX.Text = "0";
+            this.CX.Text = "-";
             // 
             // BX
             // 
@@ -190,7 +190,7 @@ namespace WindowsFormsApp1
             this.BX.Name = "BX";
             this.BX.Size = new System.Drawing.Size(16, 17);
             this.BX.TabIndex = 35;
-            this.BX.Text = "0";
+            this.BX.Text = "-";
             // 
             // AX
             // 
@@ -199,7 +199,7 @@ namespace WindowsFormsApp1
             this.AX.Name = "AX";
             this.AX.Size = new System.Drawing.Size(16, 17);
             this.AX.TabIndex = 32;
-            this.AX.Text = "0";
+            this.AX.Text = "-";
             // 
             // label11
             // 
